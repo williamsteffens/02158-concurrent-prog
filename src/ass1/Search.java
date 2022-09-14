@@ -188,7 +188,12 @@ public class Search {
                     fname, new String(pattern), ntasks, nthreads, warmups, runs);
 
             /* Setup execution engine */
-            ExecutorService engine = Executors.newSingleThreadExecutor();
+            // for p1 and p2
+            //ExecutorService engine = Executors.newSingleThreadExecutor();
+            // for p3
+            ExecutorService engine = Executors.newCachedThreadPool();
+            // for p4
+            //ExecutorService engine = Executors.newFixedThreadPool(nthreads);
 
             /**********************************************
              * Run search using a single task
@@ -233,22 +238,21 @@ public class Search {
             writeData("MultiTasks");
 
             // Create list of tasks
-            List<SearchTask> taskList = new ArrayList<SearchTask>();
+            List<SearchTask> taskList = new ArrayList<>();
 
             // TODO: Add tasks to list here
-            int upperTaskLimit = len / pattern.length;
-            int from = len / ntasks;
-            if (ntasks > upperTaskLimit) {
-                throw new IllegalStateException("The number of tasks exceed the upper limit of tasks possible for the request. The upper limit of tasks is: " + upperTaskLimit + " (file length / pattern length)");
-            } else {
-                // add the special case of i = 0 first
-                for (int i = 0; i < ntasks; ++i) {
-                    if (i > 0)
-                        taskList.add(new SearchTask(text, pattern, i * from - (pattern.length - 1), i * from + from));
-                    else
-                        taskList.add(new SearchTask(text, pattern, 0, from));
-                }
-            }
+            if (pattern.length > len)
+                throw new IllegalStateException("The length of the pattern cannot exceed the length of the file.");
+
+            int upperTaskLimit = len - (pattern.length - 1);
+            if (ntasks > upperTaskLimit)
+                throw new IllegalStateException("The number of tasks exceed the upper limit of tasks possible for the request. The upper limit of tasks is: " + upperTaskLimit + " (len of file - (pattern.len - 1))");
+
+            int partition = (int)Math.ceil((len - (pattern.length - 1)) / (double)ntasks);
+            int u;
+            for (u = 0; u < ntasks - 1; ++u)
+                taskList.add(new SearchTask(text, pattern, u * partition, (u + 1) * partition + pattern.length - 1));
+            taskList.add(new SearchTask(text, pattern, u * partition, len));
 
             List<Integer> result = null;
             
@@ -270,9 +274,8 @@ public class Search {
                 result = new LinkedList<Integer>();
 
                 // TODO: Combine future results into an overall result
-                for (Future future : futures) {
+                for (Future future : futures)
                     result.addAll((Collection<? extends Integer>) future.get());
-                }
 
                 time = (double) (System.nanoTime() - start) / 1e9;
                 totalTime += time;    
