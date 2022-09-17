@@ -1,0 +1,1188 @@
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=1, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,228222 s
+Single task: Run no.  1: 1 occurrences found in 0,228680 s
+Single task: Run no.  2: 1 occurrences found in 0,225031 s
+Single task: Run no.  3: 1 occurrences found in 0,234919 s
+Single task: Run no.  4: 1 occurrences found in 0,227544 s
+Single task: Run no.  5: 1 occurrences found in 0,234218 s
+Single task: Run no.  6: 1 occurrences found in 0,236351 s
+Single task: Run no.  7: 1 occurrences found in 0,228671 s
+Single task: Run no.  8: 1 occurrences found in 0,223775 s
+Single task: Run no.  9: 1 occurrences found in 0,229123 s
+
+Single task (avg.): 0,229653 s
+
+Using  1 tasks: Run no.  0: 1 occurrences found in 0,228047 s
+Using  1 tasks: Run no.  1: 1 occurrences found in 0,227798 s
+Using  1 tasks: Run no.  2: 1 occurrences found in 0,228159 s
+Using  1 tasks: Run no.  3: 1 occurrences found in 0,227332 s
+Using  1 tasks: Run no.  4: 1 occurrences found in 0,223880 s
+Using  1 tasks: Run no.  5: 1 occurrences found in 0,223460 s
+Using  1 tasks: Run no.  6: 1 occurrences found in 0,230193 s
+Using  1 tasks: Run no.  7: 1 occurrences found in 0,226867 s
+Using  1 tasks: Run no.  8: 1 occurrences found in 0,224235 s
+Using  1 tasks: Run no.  9: 1 occurrences found in 0,228926 s
+
+Using  1 tasks (avg.): 0,226890 s
+
+
+Average speedup: 1,01
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=2, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,229526 s
+Single task: Run no.  1: 1 occurrences found in 0,243907 s
+Single task: Run no.  2: 1 occurrences found in 0,231738 s
+Single task: Run no.  3: 1 occurrences found in 0,231067 s
+Single task: Run no.  4: 1 occurrences found in 0,227529 s
+Single task: Run no.  5: 1 occurrences found in 0,228064 s
+Single task: Run no.  6: 1 occurrences found in 0,232709 s
+Single task: Run no.  7: 1 occurrences found in 0,229962 s
+Single task: Run no.  8: 1 occurrences found in 0,230103 s
+Single task: Run no.  9: 1 occurrences found in 0,237265 s
+
+Single task (avg.): 0,232187 s
+
+Using  2 tasks: Run no.  0: 1 occurrences found in 0,116623 s
+Using  2 tasks: Run no.  1: 1 occurrences found in 0,129603 s
+Using  2 tasks: Run no.  2: 1 occurrences found in 0,118130 s
+Using  2 tasks: Run no.  3: 1 occurrences found in 0,116621 s
+Using  2 tasks: Run no.  4: 1 occurrences found in 0,115153 s
+Using  2 tasks: Run no.  5: 1 occurrences found in 0,115031 s
+Using  2 tasks: Run no.  6: 1 occurrences found in 0,120266 s
+Using  2 tasks: Run no.  7: 1 occurrences found in 0,123113 s
+Using  2 tasks: Run no.  8: 1 occurrences found in 0,140250 s
+Using  2 tasks: Run no.  9: 1 occurrences found in 0,128981 s
+
+Using  2 tasks (avg.): 0,122377 s
+
+
+Average speedup: 1,90
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=3, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,225993 s
+Single task: Run no.  1: 1 occurrences found in 0,225562 s
+Single task: Run no.  2: 1 occurrences found in 0,225525 s
+Single task: Run no.  3: 1 occurrences found in 0,226027 s
+Single task: Run no.  4: 1 occurrences found in 0,225079 s
+Single task: Run no.  5: 1 occurrences found in 0,224894 s
+Single task: Run no.  6: 1 occurrences found in 0,225376 s
+Single task: Run no.  7: 1 occurrences found in 0,226420 s
+Single task: Run no.  8: 1 occurrences found in 0,225320 s
+Single task: Run no.  9: 1 occurrences found in 0,224479 s
+
+Single task (avg.): 0,225468 s
+
+Using  3 tasks: Run no.  0: 1 occurrences found in 0,083359 s
+Using  3 tasks: Run no.  1: 1 occurrences found in 0,091898 s
+Using  3 tasks: Run no.  2: 1 occurrences found in 0,078344 s
+Using  3 tasks: Run no.  3: 1 occurrences found in 0,081660 s
+Using  3 tasks: Run no.  4: 1 occurrences found in 0,086982 s
+Using  3 tasks: Run no.  5: 1 occurrences found in 0,078140 s
+Using  3 tasks: Run no.  6: 1 occurrences found in 0,076447 s
+Using  3 tasks: Run no.  7: 1 occurrences found in 0,077839 s
+Using  3 tasks: Run no.  8: 1 occurrences found in 0,089330 s
+Using  3 tasks: Run no.  9: 1 occurrences found in 0,083930 s
+
+Using  3 tasks (avg.): 0,082793 s
+
+
+Average speedup: 2,72
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=4, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,227319 s
+Single task: Run no.  1: 1 occurrences found in 0,223095 s
+Single task: Run no.  2: 1 occurrences found in 0,225181 s
+Single task: Run no.  3: 1 occurrences found in 0,224581 s
+Single task: Run no.  4: 1 occurrences found in 0,224712 s
+Single task: Run no.  5: 1 occurrences found in 0,224171 s
+Single task: Run no.  6: 1 occurrences found in 0,225027 s
+Single task: Run no.  7: 1 occurrences found in 0,225646 s
+Single task: Run no.  8: 1 occurrences found in 0,223355 s
+Single task: Run no.  9: 1 occurrences found in 0,226575 s
+
+Single task (avg.): 0,224966 s
+
+Using  4 tasks: Run no.  0: 1 occurrences found in 0,062692 s
+Using  4 tasks: Run no.  1: 1 occurrences found in 0,071158 s
+Using  4 tasks: Run no.  2: 1 occurrences found in 0,069121 s
+Using  4 tasks: Run no.  3: 1 occurrences found in 0,067257 s
+Using  4 tasks: Run no.  4: 1 occurrences found in 0,061658 s
+Using  4 tasks: Run no.  5: 1 occurrences found in 0,071903 s
+Using  4 tasks: Run no.  6: 1 occurrences found in 0,059177 s
+Using  4 tasks: Run no.  7: 1 occurrences found in 0,063974 s
+Using  4 tasks: Run no.  8: 1 occurrences found in 0,071206 s
+Using  4 tasks: Run no.  9: 1 occurrences found in 0,074315 s
+
+Using  4 tasks (avg.): 0,067246 s
+
+
+Average speedup: 3,35
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=5, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,229986 s
+Single task: Run no.  1: 1 occurrences found in 0,223150 s
+Single task: Run no.  2: 1 occurrences found in 0,225155 s
+Single task: Run no.  3: 1 occurrences found in 0,222820 s
+Single task: Run no.  4: 1 occurrences found in 0,226806 s
+Single task: Run no.  5: 1 occurrences found in 0,223587 s
+Single task: Run no.  6: 1 occurrences found in 0,222679 s
+Single task: Run no.  7: 1 occurrences found in 0,223728 s
+Single task: Run no.  8: 1 occurrences found in 0,229915 s
+Single task: Run no.  9: 1 occurrences found in 0,224231 s
+
+Single task (avg.): 0,225206 s
+
+Using  5 tasks: Run no.  0: 1 occurrences found in 0,047187 s
+Using  5 tasks: Run no.  1: 1 occurrences found in 0,049089 s
+Using  5 tasks: Run no.  2: 1 occurrences found in 0,058714 s
+Using  5 tasks: Run no.  3: 1 occurrences found in 0,063117 s
+Using  5 tasks: Run no.  4: 1 occurrences found in 0,064733 s
+Using  5 tasks: Run no.  5: 1 occurrences found in 0,061881 s
+Using  5 tasks: Run no.  6: 1 occurrences found in 0,052462 s
+Using  5 tasks: Run no.  7: 1 occurrences found in 0,052919 s
+Using  5 tasks: Run no.  8: 1 occurrences found in 0,047357 s
+Using  5 tasks: Run no.  9: 1 occurrences found in 0,048459 s
+
+Using  5 tasks (avg.): 0,054592 s
+
+
+Average speedup: 4,13
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=6, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,225921 s
+Single task: Run no.  1: 1 occurrences found in 0,228370 s
+Single task: Run no.  2: 1 occurrences found in 0,232604 s
+Single task: Run no.  3: 1 occurrences found in 0,226206 s
+Single task: Run no.  4: 1 occurrences found in 0,226415 s
+Single task: Run no.  5: 1 occurrences found in 0,227431 s
+Single task: Run no.  6: 1 occurrences found in 0,226287 s
+Single task: Run no.  7: 1 occurrences found in 0,226371 s
+Single task: Run no.  8: 1 occurrences found in 0,224977 s
+Single task: Run no.  9: 1 occurrences found in 0,226582 s
+
+Single task (avg.): 0,227116 s
+
+Using  6 tasks: Run no.  0: 1 occurrences found in 0,047025 s
+Using  6 tasks: Run no.  1: 1 occurrences found in 0,049459 s
+Using  6 tasks: Run no.  2: 1 occurrences found in 0,047865 s
+Using  6 tasks: Run no.  3: 1 occurrences found in 0,048516 s
+Using  6 tasks: Run no.  4: 1 occurrences found in 0,048757 s
+Using  6 tasks: Run no.  5: 1 occurrences found in 0,046548 s
+Using  6 tasks: Run no.  6: 1 occurrences found in 0,057322 s
+Using  6 tasks: Run no.  7: 1 occurrences found in 0,052824 s
+Using  6 tasks: Run no.  8: 1 occurrences found in 0,057983 s
+Using  6 tasks: Run no.  9: 1 occurrences found in 0,040025 s
+
+Using  6 tasks (avg.): 0,049632 s
+
+
+Average speedup: 4,58
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=7, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,224650 s
+Single task: Run no.  1: 1 occurrences found in 0,227482 s
+Single task: Run no.  2: 1 occurrences found in 0,239635 s
+Single task: Run no.  3: 1 occurrences found in 0,229494 s
+Single task: Run no.  4: 1 occurrences found in 0,230084 s
+Single task: Run no.  5: 1 occurrences found in 0,227197 s
+Single task: Run no.  6: 1 occurrences found in 0,228469 s
+Single task: Run no.  7: 1 occurrences found in 0,225868 s
+Single task: Run no.  8: 1 occurrences found in 0,228191 s
+Single task: Run no.  9: 1 occurrences found in 0,229128 s
+
+Single task (avg.): 0,229020 s
+
+Using  7 tasks: Run no.  0: 1 occurrences found in 0,051633 s
+Using  7 tasks: Run no.  1: 1 occurrences found in 0,048623 s
+Using  7 tasks: Run no.  2: 1 occurrences found in 0,044460 s
+Using  7 tasks: Run no.  3: 1 occurrences found in 0,048404 s
+Using  7 tasks: Run no.  4: 1 occurrences found in 0,044296 s
+Using  7 tasks: Run no.  5: 1 occurrences found in 0,044680 s
+Using  7 tasks: Run no.  6: 1 occurrences found in 0,047802 s
+Using  7 tasks: Run no.  7: 1 occurrences found in 0,047079 s
+Using  7 tasks: Run no.  8: 1 occurrences found in 0,045438 s
+Using  7 tasks: Run no.  9: 1 occurrences found in 0,041535 s
+
+Using  7 tasks (avg.): 0,046395 s
+
+
+Average speedup: 4,94
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=8, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,227717 s
+Single task: Run no.  1: 1 occurrences found in 0,229908 s
+Single task: Run no.  2: 1 occurrences found in 0,229585 s
+Single task: Run no.  3: 1 occurrences found in 0,231405 s
+Single task: Run no.  4: 1 occurrences found in 0,231334 s
+Single task: Run no.  5: 1 occurrences found in 0,233147 s
+Single task: Run no.  6: 1 occurrences found in 0,238082 s
+Single task: Run no.  7: 1 occurrences found in 0,229808 s
+Single task: Run no.  8: 1 occurrences found in 0,229008 s
+Single task: Run no.  9: 1 occurrences found in 0,226030 s
+
+Single task (avg.): 0,230602 s
+
+Using  8 tasks: Run no.  0: 1 occurrences found in 0,042383 s
+Using  8 tasks: Run no.  1: 1 occurrences found in 0,042674 s
+Using  8 tasks: Run no.  2: 1 occurrences found in 0,045044 s
+Using  8 tasks: Run no.  3: 1 occurrences found in 0,041070 s
+Using  8 tasks: Run no.  4: 1 occurrences found in 0,044264 s
+Using  8 tasks: Run no.  5: 1 occurrences found in 0,046118 s
+Using  8 tasks: Run no.  6: 1 occurrences found in 0,046082 s
+Using  8 tasks: Run no.  7: 1 occurrences found in 0,042258 s
+Using  8 tasks: Run no.  8: 1 occurrences found in 0,045816 s
+Using  8 tasks: Run no.  9: 1 occurrences found in 0,044010 s
+
+Using  8 tasks (avg.): 0,043972 s
+
+
+Average speedup: 5,24
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=9, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,229138 s
+Single task: Run no.  1: 1 occurrences found in 0,230789 s
+Single task: Run no.  2: 1 occurrences found in 0,247046 s
+Single task: Run no.  3: 1 occurrences found in 0,228999 s
+Single task: Run no.  4: 1 occurrences found in 0,230960 s
+Single task: Run no.  5: 1 occurrences found in 0,229595 s
+Single task: Run no.  6: 1 occurrences found in 0,229442 s
+Single task: Run no.  7: 1 occurrences found in 0,229829 s
+Single task: Run no.  8: 1 occurrences found in 0,241844 s
+Single task: Run no.  9: 1 occurrences found in 0,250297 s
+
+Single task (avg.): 0,234794 s
+
+Using  9 tasks: Run no.  0: 1 occurrences found in 0,044833 s
+Using  9 tasks: Run no.  1: 1 occurrences found in 0,040156 s
+Using  9 tasks: Run no.  2: 1 occurrences found in 0,041952 s
+Using  9 tasks: Run no.  3: 1 occurrences found in 0,042017 s
+Using  9 tasks: Run no.  4: 1 occurrences found in 0,042371 s
+Using  9 tasks: Run no.  5: 1 occurrences found in 0,042099 s
+Using  9 tasks: Run no.  6: 1 occurrences found in 0,041276 s
+Using  9 tasks: Run no.  7: 1 occurrences found in 0,063310 s
+Using  9 tasks: Run no.  8: 1 occurrences found in 0,044937 s
+Using  9 tasks: Run no.  9: 1 occurrences found in 0,040601 s
+
+Using  9 tasks (avg.): 0,044355 s
+
+
+Average speedup: 5,29
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=10, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,228781 s
+Single task: Run no.  1: 1 occurrences found in 0,228029 s
+Single task: Run no.  2: 1 occurrences found in 0,229211 s
+Single task: Run no.  3: 1 occurrences found in 0,231409 s
+Single task: Run no.  4: 1 occurrences found in 0,235750 s
+Single task: Run no.  5: 1 occurrences found in 0,228807 s
+Single task: Run no.  6: 1 occurrences found in 0,228124 s
+Single task: Run no.  7: 1 occurrences found in 0,227474 s
+Single task: Run no.  8: 1 occurrences found in 0,232666 s
+Single task: Run no.  9: 1 occurrences found in 0,230121 s
+
+Single task (avg.): 0,230037 s
+
+Using 10 tasks: Run no.  0: 1 occurrences found in 0,042328 s
+Using 10 tasks: Run no.  1: 1 occurrences found in 0,040233 s
+Using 10 tasks: Run no.  2: 1 occurrences found in 0,036526 s
+Using 10 tasks: Run no.  3: 1 occurrences found in 0,036803 s
+Using 10 tasks: Run no.  4: 1 occurrences found in 0,037281 s
+Using 10 tasks: Run no.  5: 1 occurrences found in 0,037362 s
+Using 10 tasks: Run no.  6: 1 occurrences found in 0,042464 s
+Using 10 tasks: Run no.  7: 1 occurrences found in 0,043102 s
+Using 10 tasks: Run no.  8: 1 occurrences found in 0,046627 s
+Using 10 tasks: Run no.  9: 1 occurrences found in 0,051045 s
+
+Using 10 tasks (avg.): 0,041377 s
+
+
+Average speedup: 5,56
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=11, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,224623 s
+Single task: Run no.  1: 1 occurrences found in 0,231432 s
+Single task: Run no.  2: 1 occurrences found in 0,230897 s
+Single task: Run no.  3: 1 occurrences found in 0,227423 s
+Single task: Run no.  4: 1 occurrences found in 0,225015 s
+Single task: Run no.  5: 1 occurrences found in 0,225840 s
+Single task: Run no.  6: 1 occurrences found in 0,224642 s
+Single task: Run no.  7: 1 occurrences found in 0,224553 s
+Single task: Run no.  8: 1 occurrences found in 0,225274 s
+Single task: Run no.  9: 1 occurrences found in 0,237597 s
+
+Single task (avg.): 0,227729 s
+
+Using 11 tasks: Run no.  0: 1 occurrences found in 0,033742 s
+Using 11 tasks: Run no.  1: 1 occurrences found in 0,034041 s
+Using 11 tasks: Run no.  2: 1 occurrences found in 0,034302 s
+Using 11 tasks: Run no.  3: 1 occurrences found in 0,034324 s
+Using 11 tasks: Run no.  4: 1 occurrences found in 0,034722 s
+Using 11 tasks: Run no.  5: 1 occurrences found in 0,034485 s
+Using 11 tasks: Run no.  6: 1 occurrences found in 0,033868 s
+Using 11 tasks: Run no.  7: 1 occurrences found in 0,034819 s
+Using 11 tasks: Run no.  8: 1 occurrences found in 0,047381 s
+Using 11 tasks: Run no.  9: 1 occurrences found in 0,042495 s
+
+Using 11 tasks (avg.): 0,036418 s
+
+
+Average speedup: 6,25
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=12, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,225959 s
+Single task: Run no.  1: 1 occurrences found in 0,225829 s
+Single task: Run no.  2: 1 occurrences found in 0,223551 s
+Single task: Run no.  3: 1 occurrences found in 0,227113 s
+Single task: Run no.  4: 1 occurrences found in 0,224575 s
+Single task: Run no.  5: 1 occurrences found in 0,224664 s
+Single task: Run no.  6: 1 occurrences found in 0,225724 s
+Single task: Run no.  7: 1 occurrences found in 0,223588 s
+Single task: Run no.  8: 1 occurrences found in 0,224164 s
+Single task: Run no.  9: 1 occurrences found in 0,226685 s
+
+Single task (avg.): 0,225185 s
+
+Using 12 tasks: Run no.  0: 1 occurrences found in 0,031800 s
+Using 12 tasks: Run no.  1: 1 occurrences found in 0,031777 s
+Using 12 tasks: Run no.  2: 1 occurrences found in 0,031817 s
+Using 12 tasks: Run no.  3: 1 occurrences found in 0,031692 s
+Using 12 tasks: Run no.  4: 1 occurrences found in 0,031486 s
+Using 12 tasks: Run no.  5: 1 occurrences found in 0,031655 s
+Using 12 tasks: Run no.  6: 1 occurrences found in 0,031576 s
+Using 12 tasks: Run no.  7: 1 occurrences found in 0,031641 s
+Using 12 tasks: Run no.  8: 1 occurrences found in 0,031891 s
+Using 12 tasks: Run no.  9: 1 occurrences found in 0,037145 s
+
+Using 12 tasks (avg.): 0,032248 s
+
+
+Average speedup: 6,98
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=13, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,223706 s
+Single task: Run no.  1: 1 occurrences found in 0,226564 s
+Single task: Run no.  2: 1 occurrences found in 0,228639 s
+Single task: Run no.  3: 1 occurrences found in 0,230518 s
+Single task: Run no.  4: 1 occurrences found in 0,226752 s
+Single task: Run no.  5: 1 occurrences found in 0,226769 s
+Single task: Run no.  6: 1 occurrences found in 0,222956 s
+Single task: Run no.  7: 1 occurrences found in 0,224624 s
+Single task: Run no.  8: 1 occurrences found in 0,234231 s
+Single task: Run no.  9: 1 occurrences found in 0,231943 s
+
+Single task (avg.): 0,227670 s
+
+Using 13 tasks: Run no.  0: 1 occurrences found in 0,036853 s
+Using 13 tasks: Run no.  1: 1 occurrences found in 0,039114 s
+Using 13 tasks: Run no.  2: 1 occurrences found in 0,040221 s
+Using 13 tasks: Run no.  3: 1 occurrences found in 0,037411 s
+Using 13 tasks: Run no.  4: 1 occurrences found in 0,040777 s
+Using 13 tasks: Run no.  5: 1 occurrences found in 0,042641 s
+Using 13 tasks: Run no.  6: 1 occurrences found in 0,038875 s
+Using 13 tasks: Run no.  7: 1 occurrences found in 0,037711 s
+Using 13 tasks: Run no.  8: 1 occurrences found in 0,038826 s
+Using 13 tasks: Run no.  9: 1 occurrences found in 0,039421 s
+
+Using 13 tasks (avg.): 0,039185 s
+
+
+Average speedup: 5,81
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=14, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,226068 s
+Single task: Run no.  1: 1 occurrences found in 0,223583 s
+Single task: Run no.  2: 1 occurrences found in 0,225504 s
+Single task: Run no.  3: 1 occurrences found in 0,224101 s
+Single task: Run no.  4: 1 occurrences found in 0,224280 s
+Single task: Run no.  5: 1 occurrences found in 0,224307 s
+Single task: Run no.  6: 1 occurrences found in 0,228888 s
+Single task: Run no.  7: 1 occurrences found in 0,229735 s
+Single task: Run no.  8: 1 occurrences found in 0,224613 s
+Single task: Run no.  9: 1 occurrences found in 0,223647 s
+
+Single task (avg.): 0,225473 s
+
+Using 14 tasks: Run no.  0: 1 occurrences found in 0,036638 s
+Using 14 tasks: Run no.  1: 1 occurrences found in 0,042355 s
+Using 14 tasks: Run no.  2: 1 occurrences found in 0,035843 s
+Using 14 tasks: Run no.  3: 1 occurrences found in 0,037404 s
+Using 14 tasks: Run no.  4: 1 occurrences found in 0,040118 s
+Using 14 tasks: Run no.  5: 1 occurrences found in 0,036220 s
+Using 14 tasks: Run no.  6: 1 occurrences found in 0,038571 s
+Using 14 tasks: Run no.  7: 1 occurrences found in 0,039085 s
+Using 14 tasks: Run no.  8: 1 occurrences found in 0,043101 s
+Using 14 tasks: Run no.  9: 1 occurrences found in 0,040341 s
+
+Using 14 tasks (avg.): 0,038967 s
+
+
+Average speedup: 5,79
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=15, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,226720 s
+Single task: Run no.  1: 1 occurrences found in 0,226777 s
+Single task: Run no.  2: 1 occurrences found in 0,231222 s
+Single task: Run no.  3: 1 occurrences found in 0,228277 s
+Single task: Run no.  4: 1 occurrences found in 0,227047 s
+Single task: Run no.  5: 1 occurrences found in 0,225345 s
+Single task: Run no.  6: 1 occurrences found in 0,225488 s
+Single task: Run no.  7: 1 occurrences found in 0,227227 s
+Single task: Run no.  8: 1 occurrences found in 0,226256 s
+Single task: Run no.  9: 1 occurrences found in 0,227650 s
+
+Single task (avg.): 0,227201 s
+
+Using 15 tasks: Run no.  0: 1 occurrences found in 0,046369 s
+Using 15 tasks: Run no.  1: 1 occurrences found in 0,044604 s
+Using 15 tasks: Run no.  2: 1 occurrences found in 0,038475 s
+Using 15 tasks: Run no.  3: 1 occurrences found in 0,038432 s
+Using 15 tasks: Run no.  4: 1 occurrences found in 0,038855 s
+Using 15 tasks: Run no.  5: 1 occurrences found in 0,039657 s
+Using 15 tasks: Run no.  6: 1 occurrences found in 0,044824 s
+Using 15 tasks: Run no.  7: 1 occurrences found in 0,038215 s
+Using 15 tasks: Run no.  8: 1 occurrences found in 0,046340 s
+Using 15 tasks: Run no.  9: 1 occurrences found in 0,043364 s
+
+Using 15 tasks (avg.): 0,041914 s
+
+
+Average speedup: 5,42
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=16, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,226528 s
+Single task: Run no.  1: 1 occurrences found in 0,224379 s
+Single task: Run no.  2: 1 occurrences found in 0,225035 s
+Single task: Run no.  3: 1 occurrences found in 0,225905 s
+Single task: Run no.  4: 1 occurrences found in 0,227614 s
+Single task: Run no.  5: 1 occurrences found in 0,232760 s
+Single task: Run no.  6: 1 occurrences found in 0,226519 s
+Single task: Run no.  7: 1 occurrences found in 0,225498 s
+Single task: Run no.  8: 1 occurrences found in 0,226992 s
+Single task: Run no.  9: 1 occurrences found in 0,228194 s
+
+Single task (avg.): 0,226942 s
+
+Using 16 tasks: Run no.  0: 1 occurrences found in 0,037580 s
+Using 16 tasks: Run no.  1: 1 occurrences found in 0,044520 s
+Using 16 tasks: Run no.  2: 1 occurrences found in 0,042408 s
+Using 16 tasks: Run no.  3: 1 occurrences found in 0,036276 s
+Using 16 tasks: Run no.  4: 1 occurrences found in 0,033528 s
+Using 16 tasks: Run no.  5: 1 occurrences found in 0,038600 s
+Using 16 tasks: Run no.  6: 1 occurrences found in 0,038740 s
+Using 16 tasks: Run no.  7: 1 occurrences found in 0,034111 s
+Using 16 tasks: Run no.  8: 1 occurrences found in 0,037438 s
+Using 16 tasks: Run no.  9: 1 occurrences found in 0,036809 s
+
+Using 16 tasks (avg.): 0,038001 s
+
+
+Average speedup: 5,97
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=17, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,224095 s
+Single task: Run no.  1: 1 occurrences found in 0,224348 s
+Single task: Run no.  2: 1 occurrences found in 0,224008 s
+Single task: Run no.  3: 1 occurrences found in 0,223833 s
+Single task: Run no.  4: 1 occurrences found in 0,223338 s
+Single task: Run no.  5: 1 occurrences found in 0,224206 s
+Single task: Run no.  6: 1 occurrences found in 0,224170 s
+Single task: Run no.  7: 1 occurrences found in 0,232497 s
+Single task: Run no.  8: 1 occurrences found in 0,226402 s
+Single task: Run no.  9: 1 occurrences found in 0,224349 s
+
+Single task (avg.): 0,225124 s
+
+Using 17 tasks: Run no.  0: 1 occurrences found in 0,036064 s
+Using 17 tasks: Run no.  1: 1 occurrences found in 0,040584 s
+Using 17 tasks: Run no.  2: 1 occurrences found in 0,041483 s
+Using 17 tasks: Run no.  3: 1 occurrences found in 0,038115 s
+Using 17 tasks: Run no.  4: 1 occurrences found in 0,034385 s
+Using 17 tasks: Run no.  5: 1 occurrences found in 0,038226 s
+Using 17 tasks: Run no.  6: 1 occurrences found in 0,040684 s
+Using 17 tasks: Run no.  7: 1 occurrences found in 0,033566 s
+Using 17 tasks: Run no.  8: 1 occurrences found in 0,040819 s
+Using 17 tasks: Run no.  9: 1 occurrences found in 0,042952 s
+
+Using 17 tasks (avg.): 0,038688 s
+
+
+Average speedup: 5,82
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=18, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,232028 s
+Single task: Run no.  1: 1 occurrences found in 0,232494 s
+Single task: Run no.  2: 1 occurrences found in 0,231171 s
+Single task: Run no.  3: 1 occurrences found in 0,227767 s
+Single task: Run no.  4: 1 occurrences found in 0,224947 s
+Single task: Run no.  5: 1 occurrences found in 0,224837 s
+Single task: Run no.  6: 1 occurrences found in 0,225342 s
+Single task: Run no.  7: 1 occurrences found in 0,225806 s
+Single task: Run no.  8: 1 occurrences found in 0,225583 s
+Single task: Run no.  9: 1 occurrences found in 0,228084 s
+
+Single task (avg.): 0,227806 s
+
+Using 18 tasks: Run no.  0: 1 occurrences found in 0,037475 s
+Using 18 tasks: Run no.  1: 1 occurrences found in 0,038790 s
+Using 18 tasks: Run no.  2: 1 occurrences found in 0,041011 s
+Using 18 tasks: Run no.  3: 1 occurrences found in 0,039664 s
+Using 18 tasks: Run no.  4: 1 occurrences found in 0,036682 s
+Using 18 tasks: Run no.  5: 1 occurrences found in 0,035534 s
+Using 18 tasks: Run no.  6: 1 occurrences found in 0,036944 s
+Using 18 tasks: Run no.  7: 1 occurrences found in 0,037331 s
+Using 18 tasks: Run no.  8: 1 occurrences found in 0,036644 s
+Using 18 tasks: Run no.  9: 1 occurrences found in 0,035920 s
+
+Using 18 tasks (avg.): 0,037599 s
+
+
+Average speedup: 6,06
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=19, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,223722 s
+Single task: Run no.  1: 1 occurrences found in 0,224374 s
+Single task: Run no.  2: 1 occurrences found in 0,225285 s
+Single task: Run no.  3: 1 occurrences found in 0,225930 s
+Single task: Run no.  4: 1 occurrences found in 0,224222 s
+Single task: Run no.  5: 1 occurrences found in 0,236447 s
+Single task: Run no.  6: 1 occurrences found in 0,226505 s
+Single task: Run no.  7: 1 occurrences found in 0,224419 s
+Single task: Run no.  8: 1 occurrences found in 0,224143 s
+Single task: Run no.  9: 1 occurrences found in 0,223119 s
+
+Single task (avg.): 0,225817 s
+
+Using 19 tasks: Run no.  0: 1 occurrences found in 0,037006 s
+Using 19 tasks: Run no.  1: 1 occurrences found in 0,036759 s
+Using 19 tasks: Run no.  2: 1 occurrences found in 0,037437 s
+Using 19 tasks: Run no.  3: 1 occurrences found in 0,034467 s
+Using 19 tasks: Run no.  4: 1 occurrences found in 0,036062 s
+Using 19 tasks: Run no.  5: 1 occurrences found in 0,036067 s
+Using 19 tasks: Run no.  6: 1 occurrences found in 0,037384 s
+Using 19 tasks: Run no.  7: 1 occurrences found in 0,038012 s
+Using 19 tasks: Run no.  8: 1 occurrences found in 0,037250 s
+Using 19 tasks: Run no.  9: 1 occurrences found in 0,035833 s
+
+Using 19 tasks (avg.): 0,036628 s
+
+
+Average speedup: 6,17
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=20, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,225931 s
+Single task: Run no.  1: 1 occurrences found in 0,223818 s
+Single task: Run no.  2: 1 occurrences found in 0,224564 s
+Single task: Run no.  3: 1 occurrences found in 0,223494 s
+Single task: Run no.  4: 1 occurrences found in 0,223532 s
+Single task: Run no.  5: 1 occurrences found in 0,223894 s
+Single task: Run no.  6: 1 occurrences found in 0,225242 s
+Single task: Run no.  7: 1 occurrences found in 0,227949 s
+Single task: Run no.  8: 1 occurrences found in 0,230006 s
+Single task: Run no.  9: 1 occurrences found in 0,233167 s
+
+Single task (avg.): 0,226160 s
+
+Using 20 tasks: Run no.  0: 1 occurrences found in 0,036745 s
+Using 20 tasks: Run no.  1: 1 occurrences found in 0,039174 s
+Using 20 tasks: Run no.  2: 1 occurrences found in 0,035470 s
+Using 20 tasks: Run no.  3: 1 occurrences found in 0,035084 s
+Using 20 tasks: Run no.  4: 1 occurrences found in 0,036510 s
+Using 20 tasks: Run no.  5: 1 occurrences found in 0,034631 s
+Using 20 tasks: Run no.  6: 1 occurrences found in 0,036784 s
+Using 20 tasks: Run no.  7: 1 occurrences found in 0,035432 s
+Using 20 tasks: Run no.  8: 1 occurrences found in 0,034225 s
+Using 20 tasks: Run no.  9: 1 occurrences found in 0,037066 s
+
+Using 20 tasks (avg.): 0,036112 s
+
+
+Average speedup: 6,26
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=25, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,224077 s
+Single task: Run no.  1: 1 occurrences found in 0,222929 s
+Single task: Run no.  2: 1 occurrences found in 0,224404 s
+Single task: Run no.  3: 1 occurrences found in 0,228874 s
+Single task: Run no.  4: 1 occurrences found in 0,241738 s
+Single task: Run no.  5: 1 occurrences found in 0,232838 s
+Single task: Run no.  6: 1 occurrences found in 0,225129 s
+Single task: Run no.  7: 1 occurrences found in 0,224564 s
+Single task: Run no.  8: 1 occurrences found in 0,223791 s
+Single task: Run no.  9: 1 occurrences found in 0,223584 s
+
+Single task (avg.): 0,227193 s
+
+Using 25 tasks: Run no.  0: 1 occurrences found in 0,038908 s
+Using 25 tasks: Run no.  1: 1 occurrences found in 0,039256 s
+Using 25 tasks: Run no.  2: 1 occurrences found in 0,034108 s
+Using 25 tasks: Run no.  3: 1 occurrences found in 0,038515 s
+Using 25 tasks: Run no.  4: 1 occurrences found in 0,032680 s
+Using 25 tasks: Run no.  5: 1 occurrences found in 0,038483 s
+Using 25 tasks: Run no.  6: 1 occurrences found in 0,034699 s
+Using 25 tasks: Run no.  7: 1 occurrences found in 0,038684 s
+Using 25 tasks: Run no.  8: 1 occurrences found in 0,034914 s
+Using 25 tasks: Run no.  9: 1 occurrences found in 0,038537 s
+
+Using 25 tasks (avg.): 0,036878 s
+
+
+Average speedup: 6,16
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=30, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,226976 s
+Single task: Run no.  1: 1 occurrences found in 0,223021 s
+Single task: Run no.  2: 1 occurrences found in 0,225351 s
+Single task: Run no.  3: 1 occurrences found in 0,225891 s
+Single task: Run no.  4: 1 occurrences found in 0,223532 s
+Single task: Run no.  5: 1 occurrences found in 0,226216 s
+Single task: Run no.  6: 1 occurrences found in 0,229304 s
+Single task: Run no.  7: 1 occurrences found in 0,233627 s
+Single task: Run no.  8: 1 occurrences found in 0,232168 s
+Single task: Run no.  9: 1 occurrences found in 0,227529 s
+
+Single task (avg.): 0,227362 s
+
+Using 30 tasks: Run no.  0: 1 occurrences found in 0,034112 s
+Using 30 tasks: Run no.  1: 1 occurrences found in 0,035888 s
+Using 30 tasks: Run no.  2: 1 occurrences found in 0,035677 s
+Using 30 tasks: Run no.  3: 1 occurrences found in 0,036980 s
+Using 30 tasks: Run no.  4: 1 occurrences found in 0,036973 s
+Using 30 tasks: Run no.  5: 1 occurrences found in 0,034728 s
+Using 30 tasks: Run no.  6: 1 occurrences found in 0,037554 s
+Using 30 tasks: Run no.  7: 1 occurrences found in 0,036791 s
+Using 30 tasks: Run no.  8: 1 occurrences found in 0,033477 s
+Using 30 tasks: Run no.  9: 1 occurrences found in 0,033805 s
+
+Using 30 tasks (avg.): 0,035598 s
+
+
+Average speedup: 6,39
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=35, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,231480 s
+Single task: Run no.  1: 1 occurrences found in 0,235024 s
+Single task: Run no.  2: 1 occurrences found in 0,232898 s
+Single task: Run no.  3: 1 occurrences found in 0,227169 s
+Single task: Run no.  4: 1 occurrences found in 0,223769 s
+Single task: Run no.  5: 1 occurrences found in 0,226957 s
+Single task: Run no.  6: 1 occurrences found in 0,224874 s
+Single task: Run no.  7: 1 occurrences found in 0,223356 s
+Single task: Run no.  8: 1 occurrences found in 0,223086 s
+Single task: Run no.  9: 1 occurrences found in 0,278326 s
+
+Single task (avg.): 0,232694 s
+
+Using 35 tasks: Run no.  0: 1 occurrences found in 0,044331 s
+Using 35 tasks: Run no.  1: 1 occurrences found in 0,049546 s
+Using 35 tasks: Run no.  2: 1 occurrences found in 0,040786 s
+Using 35 tasks: Run no.  3: 1 occurrences found in 0,041266 s
+Using 35 tasks: Run no.  4: 1 occurrences found in 0,035427 s
+Using 35 tasks: Run no.  5: 1 occurrences found in 0,042779 s
+Using 35 tasks: Run no.  6: 1 occurrences found in 0,039406 s
+Using 35 tasks: Run no.  7: 1 occurrences found in 0,041268 s
+Using 35 tasks: Run no.  8: 1 occurrences found in 0,040888 s
+Using 35 tasks: Run no.  9: 1 occurrences found in 0,041512 s
+
+Using 35 tasks (avg.): 0,041721 s
+
+
+Average speedup: 5,58
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=40, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,224937 s
+Single task: Run no.  1: 1 occurrences found in 0,232950 s
+Single task: Run no.  2: 1 occurrences found in 0,228257 s
+Single task: Run no.  3: 1 occurrences found in 0,229535 s
+Single task: Run no.  4: 1 occurrences found in 0,225308 s
+Single task: Run no.  5: 1 occurrences found in 0,223993 s
+Single task: Run no.  6: 1 occurrences found in 0,224129 s
+Single task: Run no.  7: 1 occurrences found in 0,225355 s
+Single task: Run no.  8: 1 occurrences found in 0,225001 s
+Single task: Run no.  9: 1 occurrences found in 0,223720 s
+
+Single task (avg.): 0,226318 s
+
+Using 40 tasks: Run no.  0: 1 occurrences found in 0,036830 s
+Using 40 tasks: Run no.  1: 1 occurrences found in 0,037423 s
+Using 40 tasks: Run no.  2: 1 occurrences found in 0,036848 s
+Using 40 tasks: Run no.  3: 1 occurrences found in 0,037586 s
+Using 40 tasks: Run no.  4: 1 occurrences found in 0,036605 s
+Using 40 tasks: Run no.  5: 1 occurrences found in 0,035542 s
+Using 40 tasks: Run no.  6: 1 occurrences found in 0,036416 s
+Using 40 tasks: Run no.  7: 1 occurrences found in 0,036224 s
+Using 40 tasks: Run no.  8: 1 occurrences found in 0,035490 s
+Using 40 tasks: Run no.  9: 1 occurrences found in 0,036888 s
+
+Using 40 tasks (avg.): 0,036585 s
+
+
+Average speedup: 6,19
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=45, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,225227 s
+Single task: Run no.  1: 1 occurrences found in 0,225111 s
+Single task: Run no.  2: 1 occurrences found in 0,227370 s
+Single task: Run no.  3: 1 occurrences found in 0,225587 s
+Single task: Run no.  4: 1 occurrences found in 0,224345 s
+Single task: Run no.  5: 1 occurrences found in 0,233415 s
+Single task: Run no.  6: 1 occurrences found in 0,230411 s
+Single task: Run no.  7: 1 occurrences found in 0,227921 s
+Single task: Run no.  8: 1 occurrences found in 0,228479 s
+Single task: Run no.  9: 1 occurrences found in 0,224912 s
+
+Single task (avg.): 0,227278 s
+
+Using 45 tasks: Run no.  0: 1 occurrences found in 0,033705 s
+Using 45 tasks: Run no.  1: 1 occurrences found in 0,034558 s
+Using 45 tasks: Run no.  2: 1 occurrences found in 0,033093 s
+Using 45 tasks: Run no.  3: 1 occurrences found in 0,036200 s
+Using 45 tasks: Run no.  4: 1 occurrences found in 0,033653 s
+Using 45 tasks: Run no.  5: 1 occurrences found in 0,033765 s
+Using 45 tasks: Run no.  6: 1 occurrences found in 0,032744 s
+Using 45 tasks: Run no.  7: 1 occurrences found in 0,033858 s
+Using 45 tasks: Run no.  8: 1 occurrences found in 0,033001 s
+Using 45 tasks: Run no.  9: 1 occurrences found in 0,032744 s
+
+Using 45 tasks (avg.): 0,033732 s
+
+
+Average speedup: 6,74
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=50, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,224816 s
+Single task: Run no.  1: 1 occurrences found in 0,224549 s
+Single task: Run no.  2: 1 occurrences found in 0,223946 s
+Single task: Run no.  3: 1 occurrences found in 0,224890 s
+Single task: Run no.  4: 1 occurrences found in 0,223541 s
+Single task: Run no.  5: 1 occurrences found in 0,224413 s
+Single task: Run no.  6: 1 occurrences found in 0,225414 s
+Single task: Run no.  7: 1 occurrences found in 0,224073 s
+Single task: Run no.  8: 1 occurrences found in 0,224000 s
+Single task: Run no.  9: 1 occurrences found in 0,227179 s
+
+Single task (avg.): 0,224682 s
+
+Using 50 tasks: Run no.  0: 1 occurrences found in 0,035147 s
+Using 50 tasks: Run no.  1: 1 occurrences found in 0,035468 s
+Using 50 tasks: Run no.  2: 1 occurrences found in 0,033985 s
+Using 50 tasks: Run no.  3: 1 occurrences found in 0,036845 s
+Using 50 tasks: Run no.  4: 1 occurrences found in 0,036117 s
+Using 50 tasks: Run no.  5: 1 occurrences found in 0,036806 s
+Using 50 tasks: Run no.  6: 1 occurrences found in 0,035341 s
+Using 50 tasks: Run no.  7: 1 occurrences found in 0,036402 s
+Using 50 tasks: Run no.  8: 1 occurrences found in 0,033858 s
+Using 50 tasks: Run no.  9: 1 occurrences found in 0,035370 s
+
+Using 50 tasks (avg.): 0,035534 s
+
+
+Average speedup: 6,32
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=55, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,227722 s
+Single task: Run no.  1: 1 occurrences found in 0,226070 s
+Single task: Run no.  2: 1 occurrences found in 0,225046 s
+Single task: Run no.  3: 1 occurrences found in 0,225265 s
+Single task: Run no.  4: 1 occurrences found in 0,225334 s
+Single task: Run no.  5: 1 occurrences found in 0,228677 s
+Single task: Run no.  6: 1 occurrences found in 0,228574 s
+Single task: Run no.  7: 1 occurrences found in 0,224549 s
+Single task: Run no.  8: 1 occurrences found in 0,225617 s
+Single task: Run no.  9: 1 occurrences found in 0,225176 s
+
+Single task (avg.): 0,226203 s
+
+Using 55 tasks: Run no.  0: 1 occurrences found in 0,033489 s
+Using 55 tasks: Run no.  1: 1 occurrences found in 0,033528 s
+Using 55 tasks: Run no.  2: 1 occurrences found in 0,032971 s
+Using 55 tasks: Run no.  3: 1 occurrences found in 0,033119 s
+Using 55 tasks: Run no.  4: 1 occurrences found in 0,033173 s
+Using 55 tasks: Run no.  5: 1 occurrences found in 0,033740 s
+Using 55 tasks: Run no.  6: 1 occurrences found in 0,033458 s
+Using 55 tasks: Run no.  7: 1 occurrences found in 0,033546 s
+Using 55 tasks: Run no.  8: 1 occurrences found in 0,033585 s
+Using 55 tasks: Run no.  9: 1 occurrences found in 0,033155 s
+
+Using 55 tasks (avg.): 0,033376 s
+
+
+Average speedup: 6,78
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=60, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,228543 s
+Single task: Run no.  1: 1 occurrences found in 0,230721 s
+Single task: Run no.  2: 1 occurrences found in 0,230527 s
+Single task: Run no.  3: 1 occurrences found in 0,234126 s
+Single task: Run no.  4: 1 occurrences found in 0,231620 s
+Single task: Run no.  5: 1 occurrences found in 0,228899 s
+Single task: Run no.  6: 1 occurrences found in 0,235360 s
+Single task: Run no.  7: 1 occurrences found in 0,229617 s
+Single task: Run no.  8: 1 occurrences found in 0,229188 s
+Single task: Run no.  9: 1 occurrences found in 0,246250 s
+
+Single task (avg.): 0,232485 s
+
+Using 60 tasks: Run no.  0: 1 occurrences found in 0,034825 s
+Using 60 tasks: Run no.  1: 1 occurrences found in 0,037341 s
+Using 60 tasks: Run no.  2: 1 occurrences found in 0,035929 s
+Using 60 tasks: Run no.  3: 1 occurrences found in 0,035567 s
+Using 60 tasks: Run no.  4: 1 occurrences found in 0,037356 s
+Using 60 tasks: Run no.  5: 1 occurrences found in 0,035319 s
+Using 60 tasks: Run no.  6: 1 occurrences found in 0,038432 s
+Using 60 tasks: Run no.  7: 1 occurrences found in 0,033709 s
+Using 60 tasks: Run no.  8: 1 occurrences found in 0,036751 s
+Using 60 tasks: Run no.  9: 1 occurrences found in 0,034906 s
+
+Using 60 tasks (avg.): 0,036013 s
+
+
+Average speedup: 6,46
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=65, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,226238 s
+Single task: Run no.  1: 1 occurrences found in 0,229670 s
+Single task: Run no.  2: 1 occurrences found in 0,233944 s
+Single task: Run no.  3: 1 occurrences found in 0,232114 s
+Single task: Run no.  4: 1 occurrences found in 0,235982 s
+Single task: Run no.  5: 1 occurrences found in 0,229764 s
+Single task: Run no.  6: 1 occurrences found in 0,228933 s
+Single task: Run no.  7: 1 occurrences found in 0,225062 s
+Single task: Run no.  8: 1 occurrences found in 0,228867 s
+Single task: Run no.  9: 1 occurrences found in 0,229078 s
+
+Single task (avg.): 0,229965 s
+
+Using 65 tasks: Run no.  0: 1 occurrences found in 0,034313 s
+Using 65 tasks: Run no.  1: 1 occurrences found in 0,033818 s
+Using 65 tasks: Run no.  2: 1 occurrences found in 0,035004 s
+Using 65 tasks: Run no.  3: 1 occurrences found in 0,034443 s
+Using 65 tasks: Run no.  4: 1 occurrences found in 0,035241 s
+Using 65 tasks: Run no.  5: 1 occurrences found in 0,034687 s
+Using 65 tasks: Run no.  6: 1 occurrences found in 0,032920 s
+Using 65 tasks: Run no.  7: 1 occurrences found in 0,035125 s
+Using 65 tasks: Run no.  8: 1 occurrences found in 0,034646 s
+Using 65 tasks: Run no.  9: 1 occurrences found in 0,035040 s
+
+Using 65 tasks (avg.): 0,034524 s
+
+
+Average speedup: 6,66
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=70, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,228728 s
+Single task: Run no.  1: 1 occurrences found in 0,224794 s
+Single task: Run no.  2: 1 occurrences found in 0,225774 s
+Single task: Run no.  3: 1 occurrences found in 0,225935 s
+Single task: Run no.  4: 1 occurrences found in 0,225800 s
+Single task: Run no.  5: 1 occurrences found in 0,226305 s
+Single task: Run no.  6: 1 occurrences found in 0,231699 s
+Single task: Run no.  7: 1 occurrences found in 0,228175 s
+Single task: Run no.  8: 1 occurrences found in 0,225895 s
+Single task: Run no.  9: 1 occurrences found in 0,227548 s
+
+Single task (avg.): 0,227065 s
+
+Using 70 tasks: Run no.  0: 1 occurrences found in 0,032440 s
+Using 70 tasks: Run no.  1: 1 occurrences found in 0,032741 s
+Using 70 tasks: Run no.  2: 1 occurrences found in 0,033012 s
+Using 70 tasks: Run no.  3: 1 occurrences found in 0,033289 s
+Using 70 tasks: Run no.  4: 1 occurrences found in 0,032898 s
+Using 70 tasks: Run no.  5: 1 occurrences found in 0,032847 s
+Using 70 tasks: Run no.  6: 1 occurrences found in 0,032905 s
+Using 70 tasks: Run no.  7: 1 occurrences found in 0,032928 s
+Using 70 tasks: Run no.  8: 1 occurrences found in 0,033067 s
+Using 70 tasks: Run no.  9: 1 occurrences found in 0,032626 s
+
+Using 70 tasks (avg.): 0,032875 s
+
+
+Average speedup: 6,91
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=75, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,225127 s
+Single task: Run no.  1: 1 occurrences found in 0,225112 s
+Single task: Run no.  2: 1 occurrences found in 0,225544 s
+Single task: Run no.  3: 1 occurrences found in 0,229575 s
+Single task: Run no.  4: 1 occurrences found in 0,226993 s
+Single task: Run no.  5: 1 occurrences found in 0,225098 s
+Single task: Run no.  6: 1 occurrences found in 0,226459 s
+Single task: Run no.  7: 1 occurrences found in 0,225771 s
+Single task: Run no.  8: 1 occurrences found in 0,225909 s
+Single task: Run no.  9: 1 occurrences found in 0,225303 s
+
+Single task (avg.): 0,226089 s
+
+Using 75 tasks: Run no.  0: 1 occurrences found in 0,034029 s
+Using 75 tasks: Run no.  1: 1 occurrences found in 0,034887 s
+Using 75 tasks: Run no.  2: 1 occurrences found in 0,033765 s
+Using 75 tasks: Run no.  3: 1 occurrences found in 0,033179 s
+Using 75 tasks: Run no.  4: 1 occurrences found in 0,033537 s
+Using 75 tasks: Run no.  5: 1 occurrences found in 0,034879 s
+Using 75 tasks: Run no.  6: 1 occurrences found in 0,034411 s
+Using 75 tasks: Run no.  7: 1 occurrences found in 0,035209 s
+Using 75 tasks: Run no.  8: 1 occurrences found in 0,032925 s
+Using 75 tasks: Run no.  9: 1 occurrences found in 0,034036 s
+
+Using 75 tasks (avg.): 0,034086 s
+
+
+Average speedup: 6,63
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=80, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,225344 s
+Single task: Run no.  1: 1 occurrences found in 0,227152 s
+Single task: Run no.  2: 1 occurrences found in 0,223494 s
+Single task: Run no.  3: 1 occurrences found in 0,224044 s
+Single task: Run no.  4: 1 occurrences found in 0,224301 s
+Single task: Run no.  5: 1 occurrences found in 0,228689 s
+Single task: Run no.  6: 1 occurrences found in 0,228220 s
+Single task: Run no.  7: 1 occurrences found in 0,224579 s
+Single task: Run no.  8: 1 occurrences found in 0,223012 s
+Single task: Run no.  9: 1 occurrences found in 0,225268 s
+
+Single task (avg.): 0,225410 s
+
+Using 80 tasks: Run no.  0: 1 occurrences found in 0,032979 s
+Using 80 tasks: Run no.  1: 1 occurrences found in 0,032975 s
+Using 80 tasks: Run no.  2: 1 occurrences found in 0,031691 s
+Using 80 tasks: Run no.  3: 1 occurrences found in 0,032531 s
+Using 80 tasks: Run no.  4: 1 occurrences found in 0,032484 s
+Using 80 tasks: Run no.  5: 1 occurrences found in 0,032652 s
+Using 80 tasks: Run no.  6: 1 occurrences found in 0,032728 s
+Using 80 tasks: Run no.  7: 1 occurrences found in 0,032601 s
+Using 80 tasks: Run no.  8: 1 occurrences found in 0,032482 s
+Using 80 tasks: Run no.  9: 1 occurrences found in 0,032720 s
+
+Using 80 tasks (avg.): 0,032584 s
+
+
+Average speedup: 6,92
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=85, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,224783 s
+Single task: Run no.  1: 1 occurrences found in 0,223505 s
+Single task: Run no.  2: 1 occurrences found in 0,222019 s
+Single task: Run no.  3: 1 occurrences found in 0,221943 s
+Single task: Run no.  4: 1 occurrences found in 0,223630 s
+Single task: Run no.  5: 1 occurrences found in 0,222385 s
+Single task: Run no.  6: 1 occurrences found in 0,222430 s
+Single task: Run no.  7: 1 occurrences found in 0,222557 s
+Single task: Run no.  8: 1 occurrences found in 0,222465 s
+Single task: Run no.  9: 1 occurrences found in 0,225675 s
+
+Single task (avg.): 0,223139 s
+
+Using 85 tasks: Run no.  0: 1 occurrences found in 0,034697 s
+Using 85 tasks: Run no.  1: 1 occurrences found in 0,033506 s
+Using 85 tasks: Run no.  2: 1 occurrences found in 0,034586 s
+Using 85 tasks: Run no.  3: 1 occurrences found in 0,033717 s
+Using 85 tasks: Run no.  4: 1 occurrences found in 0,034987 s
+Using 85 tasks: Run no.  5: 1 occurrences found in 0,032656 s
+Using 85 tasks: Run no.  6: 1 occurrences found in 0,033761 s
+Using 85 tasks: Run no.  7: 1 occurrences found in 0,032663 s
+Using 85 tasks: Run no.  8: 1 occurrences found in 0,032746 s
+Using 85 tasks: Run no.  9: 1 occurrences found in 0,033216 s
+
+Using 85 tasks (avg.): 0,033653 s
+
+
+Average speedup: 6,63
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=90, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,223974 s
+Single task: Run no.  1: 1 occurrences found in 0,224088 s
+Single task: Run no.  2: 1 occurrences found in 0,230273 s
+Single task: Run no.  3: 1 occurrences found in 0,230764 s
+Single task: Run no.  4: 1 occurrences found in 0,225781 s
+Single task: Run no.  5: 1 occurrences found in 0,224675 s
+Single task: Run no.  6: 1 occurrences found in 0,227221 s
+Single task: Run no.  7: 1 occurrences found in 0,224885 s
+Single task: Run no.  8: 1 occurrences found in 0,223562 s
+Single task: Run no.  9: 1 occurrences found in 0,223328 s
+
+Single task (avg.): 0,225855 s
+
+Using 90 tasks: Run no.  0: 1 occurrences found in 0,033070 s
+Using 90 tasks: Run no.  1: 1 occurrences found in 0,033306 s
+Using 90 tasks: Run no.  2: 1 occurrences found in 0,032695 s
+Using 90 tasks: Run no.  3: 1 occurrences found in 0,033079 s
+Using 90 tasks: Run no.  4: 1 occurrences found in 0,031994 s
+Using 90 tasks: Run no.  5: 1 occurrences found in 0,032976 s
+Using 90 tasks: Run no.  6: 1 occurrences found in 0,032818 s
+Using 90 tasks: Run no.  7: 1 occurrences found in 0,032619 s
+Using 90 tasks: Run no.  8: 1 occurrences found in 0,032881 s
+Using 90 tasks: Run no.  9: 1 occurrences found in 0,032095 s
+
+Using 90 tasks (avg.): 0,032753 s
+
+
+Average speedup: 6,90
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=95, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,225700 s
+Single task: Run no.  1: 1 occurrences found in 0,224915 s
+Single task: Run no.  2: 1 occurrences found in 0,226609 s
+Single task: Run no.  3: 1 occurrences found in 0,224954 s
+Single task: Run no.  4: 1 occurrences found in 0,225329 s
+Single task: Run no.  5: 1 occurrences found in 0,226623 s
+Single task: Run no.  6: 1 occurrences found in 0,226138 s
+Single task: Run no.  7: 1 occurrences found in 0,234105 s
+Single task: Run no.  8: 1 occurrences found in 0,228978 s
+Single task: Run no.  9: 1 occurrences found in 0,226478 s
+
+Single task (avg.): 0,226983 s
+
+Using 95 tasks: Run no.  0: 1 occurrences found in 0,032390 s
+Using 95 tasks: Run no.  1: 1 occurrences found in 0,032574 s
+Using 95 tasks: Run no.  2: 1 occurrences found in 0,031952 s
+Using 95 tasks: Run no.  3: 1 occurrences found in 0,031912 s
+Using 95 tasks: Run no.  4: 1 occurrences found in 0,031834 s
+Using 95 tasks: Run no.  5: 1 occurrences found in 0,031976 s
+Using 95 tasks: Run no.  6: 1 occurrences found in 0,034483 s
+Using 95 tasks: Run no.  7: 1 occurrences found in 0,033128 s
+Using 95 tasks: Run no.  8: 1 occurrences found in 0,032493 s
+Using 95 tasks: Run no.  9: 1 occurrences found in 0,032316 s
+
+Using 95 tasks (avg.): 0,032506 s
+
+
+Average speedup: 6,98
+
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=100, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,223022 s
+Single task: Run no.  1: 1 occurrences found in 0,225229 s
+Single task: Run no.  2: 1 occurrences found in 0,226605 s
+Single task: Run no.  3: 1 occurrences found in 0,228927 s
+Single task: Run no.  4: 1 occurrences found in 0,236860 s
+Single task: Run no.  5: 1 occurrences found in 0,227238 s
+Single task: Run no.  6: 1 occurrences found in 0,227643 s
+Single task: Run no.  7: 1 occurrences found in 0,223785 s
+Single task: Run no.  8: 1 occurrences found in 0,227722 s
+Single task: Run no.  9: 1 occurrences found in 0,225623 s
+
+Single task (avg.): 0,227265 s
+
+Using 100 tasks: Run no.  0: 1 occurrences found in 0,032337 s
+Using 100 tasks: Run no.  1: 1 occurrences found in 0,033121 s
+Using 100 tasks: Run no.  2: 1 occurrences found in 0,033382 s
+Using 100 tasks: Run no.  3: 1 occurrences found in 0,033242 s
+Using 100 tasks: Run no.  4: 1 occurrences found in 0,033451 s
+Using 100 tasks: Run no.  5: 1 occurrences found in 0,033085 s
+Using 100 tasks: Run no.  6: 1 occurrences found in 0,033321 s
+Using 100 tasks: Run no.  7: 1 occurrences found in 0,033104 s
+Using 100 tasks: Run no.  8: 1 occurrences found in 0,032672 s
+Using 100 tasks: Run no.  9: 1 occurrences found in 0,033236 s
+
+Using 100 tasks (avg.): 0,033095 s
+
+
+Average speedup: 6,87
+
