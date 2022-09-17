@@ -189,11 +189,11 @@ public class Search {
 
             /* Setup execution engine */
             // for p1 and p2
-            //ExecutorService engine = Executors.newSingleThreadExecutor();
+            ExecutorService engine = Executors.newSingleThreadExecutor();
             // for p3
             //ExecutorService engine = Executors.newCachedThreadPool();
             // for p4
-            ExecutorService engine = Executors.newFixedThreadPool(nthreads);
+            //ExecutorService engine = Executors.newFixedThreadPool(nthreads);
 
             /**********************************************
              * Run search using a single task
