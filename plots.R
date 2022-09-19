@@ -73,10 +73,10 @@ dataT120 %>%
 
 
 ### P3
-#T1-20-100
-dataT120100 = read.table(".\\ass1data\\p3\\dataT1-20-100.csv", header = TRUE, sep = ',')
+#T1-20-100-500
+dataT120100500 = read.table(".\\ass1data\\p3\\dataT1-20-100-500.csv", header = TRUE, sep = ',')
 
-dataT120100 %>%
+dataT120100500 %>%
   ggplot(aes(x = factor(ntasks), y = speedup, group = 1)) + 
   geom_point() +
   geom_line(size = 1, alpha = 0.8) + 
@@ -91,10 +91,10 @@ dataT120100 %>%
 
 
 ### P4
-#TH1-20T1-20-100
-dataTH120T120100 = read.table(".\\ass1data\\p4\\dataTH1-20T1-20-100.csv", header = TRUE, sep = ',')
+#TH1-20T1-20-100-500
+dataTH120 = read.table(".\\ass1data\\p4\\dataTH1-20T1-20-100-500.csv", header = TRUE, sep = ',')
 
-dataTH120T120100 %>%
+dataTH120 %>%
   ggplot(aes(x = factor(ntasks), y = speedup, group = nthreads)) + 
   geom_point() +
   geom_line(size = 1, alpha = 0.8) + 
@@ -128,7 +128,7 @@ dataTH120T120100 %>%
 
 ### P5
 #T1-20-100
-dataP5T120100 %>%
+dataP5T120100500 %>%
   ggplot(aes(x = factor(ntasks), y = speedup, group = 1)) + 
   geom_point() +
   geom_line(size = 1, alpha = 0.8) + 
