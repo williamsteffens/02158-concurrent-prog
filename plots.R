@@ -40,7 +40,7 @@ dataP1merge = rbind(dataP1R10, dataP1R10W4)
 dataP1merge %>%
   ggplot(aes(x = factor(runs), y = execution.time, group = warmup, color = warmup)) + 
   geom_point() +
-  geom_line(size = 1, alpha = 0.8) + 
+  geom_line(size = 1, alpha = 1) + 
   labs(title = "Execution Time v. Runs",
        subtitle = "w/ and w/o Warm-ups",
        x = "Runs",
@@ -73,10 +73,10 @@ dataT120 %>%
 
 
 ### P3
-#T1-20-100-500
-dataT120100500 = read.table(".\\ass1data\\p3\\dataT1-20-100-500.csv", header = TRUE, sep = ',')
+#T1-20-100
+dataT120100 = read.table(".\\ass1data\\p3\\dataT1-20-100.csv", header = TRUE, sep = ',')
 
-dataT120100500 %>%
+dataT120100 %>%
   ggplot(aes(x = factor(ntasks), y = speedup, group = 1)) + 
   geom_point() +
   geom_line(size = 1, alpha = 0.8) + 
@@ -91,24 +91,22 @@ dataT120100500 %>%
 
 
 ### P4
-#TH1-20T1-20-100-500
-dataTH120 = read.table(".\\ass1data\\p4\\dataTH1-20T1-20-100-500.csv", header = TRUE, sep = ',')
+#TH1-20T1-20-100
+dataTH120T120100 = read.table(".\\ass1data\\p4\\dataTH1-20T1-20-100.csv", header = TRUE, sep = ',')
 
-dataTH120 %>%
-  ggplot(aes(x = factor(ntasks), y = speedup, group = nthreads)) + 
+dataTH120T120100 %>%
+  ggplot(aes(x = factor(ntasks), y = speedup, group = nthreads, color = nthreads)) + 
   geom_point() +
-  geom_line(size = 1, alpha = 0.8) + 
+  geom_line(size = 1, alpha = 1) + 
   labs(title = "Speedup v. ntasks",
        subtitle = "Fixed Thread Pool",
        x = "ntasks",
        y = "Speedup") + 
   #theme_fivethirtyeight() + 
-  facet_wrap(~nthreads, nrow = 4) + 
-  theme(text = element_text(size = 14), axis.title = element_text(), legend.position = "right") + 
-  ggsave(".\\ass1data\\p3\\plotT1-20-100.png", width = 8, height = 4.5, type = "cairo")
-
-
-
+  #(~nthreads, nrow = 2) + 
+  scale_color_gradient(low = "#DA8A67", high = "#008080", n.breaks = 5) + 
+  theme(text = element_text(size = 18), axis.title = element_text(), legend.position = "right") + 
+  ggsave(".\\ass1data\\p4\\plotTH1-20T1-20-100.png", width = 18, height = 9, type = "cairo")
 
 
 
@@ -128,7 +126,7 @@ dataTH120 %>%
 
 ### P5
 #T1-20-100
-dataP5T120100500 %>%
+dataP5T120100 %>%
   ggplot(aes(x = factor(ntasks), y = speedup, group = 1)) + 
   geom_point() +
   geom_line(size = 1, alpha = 0.8) + 
