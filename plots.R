@@ -92,7 +92,7 @@ dataT120100 %>%
 
 ### P4
 #TH1-20T1-20-100
-dataTH120T120100 = read.table(".\\ass1data\\p4\\dataTH1-20T1-20-100.csv", header = TRUE, sep = ',')
+dataTH120T120100 = read.table(".\\ass1data\\p4\\dataTH1-20T1-20-100-500.csv", header = TRUE, sep = ',')
 
 dataTH120T120100 %>%
   ggplot(aes(x = factor(ntasks), y = speedup, group = nthreads, color = nthreads)) + 
@@ -107,6 +107,24 @@ dataTH120T120100 %>%
   scale_color_gradient(low = "#DA8A67", high = "#008080", n.breaks = 5) + 
   theme(text = element_text(size = 18), axis.title = element_text(), legend.position = "right") + 
   ggsave(".\\ass1data\\p4\\plotTH1-20T1-20-100.png", width = 18, height = 9, type = "cairo")
+
+
+
+dataP42 = dataTH120T120100[dataTH120T120100$nthreads >= 11, ]
+
+dataP42 %>%
+  ggplot(aes(x = factor(ntasks), y = speedup, group = nthreads, color = nthreads)) + 
+  geom_point() +
+  geom_line(size = 1, alpha = 1) + 
+  labs(title = "Speedup v. ntasks",
+       subtitle = "Fixed Thread Pool for nthreads > 10",
+       x = "ntasks",
+       y = "Speedup") + 
+  #theme_fivethirtyeight() + 
+  #(~nthreads, nrow = 2) + 
+  scale_color_gradient(low = "#DA8A67", high = "#008080", n.breaks = 5) + 
+  theme(text = element_text(size = 18), axis.title = element_text(), legend.position = "right") + 
+  ggsave(".\\ass1data\\p4\\plotP42.png", width = 18, height = 9, type = "cairo")
 
 
 
