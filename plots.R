@@ -22,7 +22,7 @@ dataP1R10 %>%
        y = "Execution Time (s)") + 
   #theme_fivethirtyeight() + 
   theme(text = element_text(size = 14), axis.title = element_text(), legend.position = "right") + 
-  ggsave(".\\ass1data\\p1\\plotR10.png", width = 8, height = 4.5, type = "cairo")
+  ggsave(".\\ass1data\\p1\\plotR10.png", width = 8, height = 3.5, type = "cairo")
 
 
 # with warmups
@@ -49,7 +49,7 @@ dataP1merge %>%
   #theme_fivethirtyeight() + 
   theme(text = element_text(size = 14), axis.title = element_text(), legend.position = "right") + 
   scale_color_manual(labels = c("w/o warm-ups", "w/ warm-ups"), values = myColors) +
-  ggsave(".\\ass1data\\p1\\plotR10W4.png", width = 8, height = 4.5, type = "cairo")
+  ggsave(".\\ass1data\\p1\\plotR10W4.png", width = 8, height = 3.5, type = "cairo")
 
 
 
@@ -68,15 +68,15 @@ dataT120 %>%
        y = "Speedup") + 
   #theme_fivethirtyeight() + 
   theme(text = element_text(size = 14), axis.title = element_text(), legend.position = "right") + 
-  ggsave(".\\ass1data\\p2\\plotT1-20.png", width = 8, height = 4.5, type = "cairo")
+  ggsave(".\\ass1data\\p2\\plotT1-20.png", width = 8, height = 3, type = "cairo")
 
 
 
 ### P3
 #T1-20-100
-dataT120100 = read.table(".\\ass1data\\p3\\dataT1-20-100.csv", header = TRUE, sep = ',')
+dataT500 = read.table(".\\ass1data\\p3\\dataT1-20-100-500.csv", header = TRUE, sep = ',')
 
-dataT120100 %>%
+dataT500 %>%
   ggplot(aes(x = factor(ntasks), y = speedup, group = 1)) + 
   geom_point() +
   geom_line(size = 1, alpha = 0.8) + 
@@ -86,15 +86,15 @@ dataT120100 %>%
        y = "Speedup") + 
   #theme_fivethirtyeight() + 
   theme(text = element_text(size = 14), axis.title = element_text(), legend.position = "right") + 
-  ggsave(".\\ass1data\\p3\\plotT1-20-100.png", width = 8, height = 4.5, type = "cairo")
+  ggsave(".\\ass1data\\p3\\plotT1-20-100-500.png", width = 12, height = 4.5, type = "cairo")
 
 
 
 ### P4
 #TH1-20T1-20-100
-dataTH120T120100 = read.table(".\\ass1data\\p4\\dataTH1-20T1-20-100-500.csv", header = TRUE, sep = ',')
+dataTH120 = read.table(".\\ass1data\\p4\\dataTH1-20T1-20-100-500.csv", header = TRUE, sep = ',')
 
-dataTH120T120100 %>%
+dataTH120 %>%
   ggplot(aes(x = factor(ntasks), y = speedup, group = nthreads, color = nthreads)) + 
   geom_point() +
   geom_line(size = 1, alpha = 1) + 
@@ -106,7 +106,9 @@ dataTH120T120100 %>%
   #(~nthreads, nrow = 2) + 
   scale_color_gradient(low = "#DA8A67", high = "#008080", n.breaks = 5) + 
   theme(text = element_text(size = 18), axis.title = element_text(), legend.position = "right") + 
-  ggsave(".\\ass1data\\p4\\plotTH1-20T1-20-100.png", width = 18, height = 9, type = "cairo")
+  ggsave(".\\ass1data\\p4\\plotTH1-20T1-20-100-500.png", width = 18, height = 9, type = "cairo")
+
+
 
 
 
@@ -143,22 +145,38 @@ dataP42 %>%
 
 
 ### P5
-#T1-20-100
-dataP5T120100 %>%
+#T1-20-100-500
+dataP5T500 = read.table(".\\ass1data\\p5\\dataP5T1-20-100-500.csv", header = TRUE, sep = ',')
+
+dataP5T500 %>%
   ggplot(aes(x = factor(ntasks), y = speedup, group = 1)) + 
   geom_point() +
   geom_line(size = 1, alpha = 0.8) + 
   labs(title = "Speedup v. ntasks",
-       subtitle = "Cached Thread Pool",
+       subtitle = "Cached Thread Pool, HPC",
        x = "ntasks",
        y = "Speedup") + 
   #theme_fivethirtyeight() + 
   theme(text = element_text(size = 14), axis.title = element_text(), legend.position = "right") + 
-  ggsave(".\\ass1data\\p3\\plotT1-20-100.png", width = 8, height = 4.5, type = "cairo")
+  ggsave(".\\ass1data\\p5\\plotP5T1-20-100-500.png", width = 12, height = 4.5, type = "cairo")
 
 
 #TH1-20T1-20-100
+dataP5TH120 = read.table(".\\ass1data\\p5\\dataP5TH1-20T1-20-100-500.csv", header = TRUE, sep = ',')
 
+dataP5TH120 %>%
+  ggplot(aes(x = factor(ntasks), y = speedup, group = nthreads, color = nthreads)) + 
+  geom_point() +
+  geom_line(size = 1, alpha = 1) + 
+  labs(title = "Speedup v. ntasks",
+       subtitle = "Fixed Thread Pool, HPC",
+       x = "ntasks",
+       y = "Speedup") + 
+  #theme_fivethirtyeight() + 
+  #(~nthreads, nrow = 2) + 
+  scale_color_gradient(low = "#DA8A67", high = "#008080", n.breaks = 5) + 
+  theme(text = element_text(size = 18), axis.title = element_text(), legend.position = "right") + 
+  ggsave(".\\ass1data\\p5\\plotP5TH1-20T1-20-100-500.png", width = 18, height = 9, type = "cairo")
 
 
 

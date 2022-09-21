@@ -5,14 +5,17 @@ package ass1;
  * Version 1.2
  */
 
-import java.util.*;
-import java.util.concurrent.*;
 import java.io.*;
+import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * Search task. No need to modify.
  */
-class SearchTask implements Callable<List<Integer>> {
+class SearchTask4 implements Callable<List<Integer>> {
 
     char[] text, pattern;
     int from = 0, to = 0; // Searched string: text[from..(to-1)]
@@ -21,7 +24,7 @@ class SearchTask implements Callable<List<Integer>> {
      * Create a task for searching occurrences of 'pattern' in the substring
      * text[from..(to-1)]
      */
-    public SearchTask(char[] text, char[] pattern, int from, int to) {
+    public SearchTask4(char[] text, char[] pattern, int from, int to) {
         this.text = text;
         this.pattern = pattern;
         this.from = from;
@@ -48,7 +51,7 @@ class SearchTask implements Callable<List<Integer>> {
 }
 
 
-public class Search {
+public class Search4 {
 
     static final int max = 10000000; // Max no. of chars searched
 
@@ -188,17 +191,12 @@ public class Search {
                     fname, new String(pattern), ntasks, nthreads, warmups, runs);
 
             /* Setup execution engine */
-            // for p1 and p2
-            //ExecutorService engine = Executors.newSingleThreadExecutor();
-            // for p3
-            //ExecutorService engine = Executors.newCachedThreadPool();
-            // for p4
             ExecutorService engine = Executors.newFixedThreadPool(nthreads);
 
             /**********************************************
              * Run search using a single task
              *********************************************/
-            SearchTask singleSearch = new SearchTask(text, pattern, 0, len);
+            SearchTask4 singleSearch = new SearchTask4(text, pattern, 0, len);
 
             List<Integer> singleResult = null;
 
@@ -213,7 +211,6 @@ public class Search {
             /* Run for time measurement(s) and proper result */
             totalTime = 0.0;
 
-            //writeData("SingleTask");
             for (int run = 0; run < runs; run++) {
                 start = System.nanoTime();
 
@@ -224,9 +221,7 @@ public class Search {
 
                 System.out.print("\nSingle task: ");
                 writeRun(run);  writeResult(singleResult);  writeTime(time);
-                //writeData(run + ", " + time);
             }
-            //writeData("\n");
 
             double singleTime = totalTime / runs;
             System.out.print("\n\nSingle task (avg.): ");
@@ -235,26 +230,23 @@ public class Search {
             /**********************************************
              * Run search using multiple tasks
              *********************************************/
-            //writeData("MultiTasks");
 
             // Create list of tasks
-            List<SearchTask> taskList = new ArrayList<>();
+            List<SearchTask4> taskList = new ArrayList<>();
 
             // TODO: Add tasks to list here
-            /*
             if (pattern.length > len)
                 throw new IllegalStateException("The length of the pattern cannot exceed the length of the file.");
 
             int upperTaskLimit = len - (pattern.length - 1);
             if (ntasks > upperTaskLimit)
                 throw new IllegalStateException("The number of tasks exceed the upper limit of tasks possible for the request. The upper limit of tasks is: " + upperTaskLimit + " (len of file - (pattern.len - 1))");
-            */
 
             int partition = (int)Math.ceil((len - (pattern.length - 1)) / (double)ntasks);
             int u;
             for (u = 0; u < ntasks - 1; ++u)
-                taskList.add(new SearchTask(text, pattern, u * partition, (u + 1) * partition + pattern.length - 1));
-            taskList.add(new SearchTask(text, pattern, u * partition, len));
+                taskList.add(new SearchTask4(text, pattern, u * partition, (u + 1) * partition + pattern.length - 1));
+            taskList.add(new SearchTask4(text, pattern, u * partition, len));
 
             List<Integer> result = null;
             
@@ -289,9 +281,6 @@ public class Search {
             double multiTime = totalTime / runs;
             System.out.printf("\n\nUsing %2d tasks (avg.): ", ntasks); 
             writeTime(multiTime);  System.out.println();
-
-            //System.out.println("singleResult: " + singleResult.toString());
-            //System.out.println("multiResult: " + result.toString());
             
             if (!singleResult.equals(result)) {
                 System.out.println("\nERROR: lists differ");
@@ -301,7 +290,6 @@ public class Search {
             /**********************************************
              * Terminate engine after use
              *********************************************/
-            //writeData(ntasks + ", " + singleTime / multiTime);
             writeData(nthreads + ", " + ntasks + ", " + singleTime / multiTime);
 
             engine.shutdown();
