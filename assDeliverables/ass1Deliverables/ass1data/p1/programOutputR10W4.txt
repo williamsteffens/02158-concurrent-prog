@@ -1,0 +1,16 @@
+
+File=shakespeare.txt, pattern='To be, or not to be, that is the question'
+ntasks=1, nthreads=1, warmups=4, runs=10
+
+Single task: Run no.  0: 1 occurrences found in 0,223367 s
+Single task: Run no.  1: 1 occurrences found in 0,227720 s
+Single task: Run no.  2: 1 occurrences found in 0,228363 s
+Single task: Run no.  3: 1 occurrences found in 0,225498 s
+Single task: Run no.  4: 1 occurrences found in 0,224055 s
+Single task: Run no.  5: 1 occurrences found in 0,228010 s
+Single task: Run no.  6: 1 occurrences found in 0,242451 s
+Single task: Run no.  7: 1 occurrences found in 0,230644 s
+Single task: Run no.  8: 1 occurrences found in 0,241309 s
+Single task: Run no.  9: 1 occurrences found in 0,224710 s
+
+Single task (avg.): 0,229613 s
