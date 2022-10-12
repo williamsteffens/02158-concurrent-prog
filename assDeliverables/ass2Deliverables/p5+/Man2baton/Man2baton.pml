@@ -139,5 +139,5 @@ active [N] proctype Car () {
 active proctype Check_Binary_Sem()
 {
 	/* Check split binary semaphore principle holds */
-	assert(!(eSem && upSem && downSem))
+	assert(!((eSem && upSem) || (eSem && downSem) || (upSem && downSem)))
 }
