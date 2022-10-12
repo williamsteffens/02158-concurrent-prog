@@ -1,0 +1,25 @@
+Depth=      10 States=       11 Transitions=       11 Memory=     2.195	
+Depth=      20 States=      113 Transitions=      177 Memory=     2.195	
+Depth=      30 States= 1.19e+003 Transitions= 1.65e+003 Memory=     2.293	
+Depth=      40 States= 4.33e+004 Transitions= 6.77e+004 Memory=     8.543	t=  0.031 R=  1e+006
+pan:1: assertion violated  !((inAlleyUp&&inAlleyDown)) (at depth 48)
+pan: wrote Man2multi.pml.trail
+(Spin Version 6.0.0 -- 5 December 2010)
+Warning: Search not completed
+	+ Using Breadth-First Search
+	+ Partial Order Reduction
+Full statespace search for:
+	never claim         	- (none specified)
+	assertion violations	+
+	cycle checks       	- (disabled by -DSAFETY)
+	invalid end states	- (disabled by -E flag)
+State-vector 80 byte, depth reached 48, ••• errors: 1 •••
+   715949 states, stored
+	  662353 nominal states (stored-atomic)
+   505083 states, matched
+  1221032 transitions (= stored+matched)
+    53596 atomic steps
+hash conflicts:    268323 (resolved)
+  106.102	memory usage (Mbyte)
+pan: elapsed time 0.622 seconds
+pan: rate 1151043.4 states/second
