@@ -135,3 +135,9 @@ active [N] proctype Car () {
         do :: true -> skip :: break od
     od;
 }
+
+active proctype Check_Binary_Sem()
+{
+	/* Check split binary semaphore principle holds */
+	assert(!(eSem && upSem && downSem))
+}
