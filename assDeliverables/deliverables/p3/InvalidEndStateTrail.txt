@@ -1,0 +1,38 @@
+7 Car   67  1              
+7 Car   33  else           
+6 Car   67  1              
+6 Car   33  else           
+5 Car   67  1              
+5 Car   33  else           
+4 Car   67  1              
+4 Car   33  else           
+3 Car   67  1              
+3 Car   24  pid<4          
+2 Car   67  1              
+2 Car   24  pid<4          
+1 Car   67  1              
+1 Car   24  pid<4          
+0 Car   67  1              
+0 Car   24  pid<4          
+7 Car   34  upSem>0        
+7 Car   34  upSem = (upSem 
+Process Statement          upSem      
+7 Car   36  up==0          0          
+3 Car   25  downSem>0      0          
+3 Car   25  downSem = (dow 0          
+Process Statement          downSem    upSem      
+3 Car   27  down==0        0          0          
+0 Car   25  downSem>0      0          0          
+	transition failed
+spin: trail ends after 21 steps
+#processes: 8
+ 21:	proc  7 (Car) Man2multi.pml:36 (state 25)
+ 21:	proc  6 (Car) Man2multi.pml:34 (state 21)
+ 21:	proc  5 (Car) Man2multi.pml:34 (state 21)
+ 21:	proc  4 (Car) Man2multi.pml:34 (state 21)
+ 21:	proc  3 (Car) Man2multi.pml:27 (state 9)
+ 21:	proc  2 (Car) Man2multi.pml:25 (state 5)
+ 21:	proc  1 (Car) Man2multi.pml:25 (state 5)
+ 21:	proc  0 (Car) Man2multi.pml:25 (state 3)
+8 processes created
+Exit-Status 0
