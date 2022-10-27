@@ -112,14 +112,14 @@ dataTH120 %>%
 
 
 
-dataP42 = dataTH120T120100[dataTH120T120100$nthreads >= 11, ]
+dataP42 = dataTH120[dataTH120$nthreads >= 12, ]
 
 dataP42 %>%
   ggplot(aes(x = factor(ntasks), y = speedup, group = nthreads, color = nthreads)) + 
   geom_point() +
   geom_line(size = 1, alpha = 1) + 
   labs(title = "Speedup v. ntasks",
-       subtitle = "Fixed Thread Pool for nthreads > 10",
+       subtitle = "Fixed Thread Pool for nthreads > 11",
        x = "ntasks",
        y = "Speedup") + 
   #theme_fivethirtyeight() + 
@@ -181,9 +181,24 @@ dataP5TH120 %>%
 
 
 
+dataT500$group = 'P3'
+dataP5T500$group = 'P5'
 
+dataP5merge = rbind(dataT500, dataP5T500)
 
-
+dataP5merge %>%
+  ggplot(aes(x = factor(ntasks), y = speedup, group = group, color = group)) + 
+  geom_point() +
+  geom_line(size = 1, alpha = 1) + 
+  labs(title = "Speedup v. ntasks",
+       subtitle = "Cached Thread Pool, local and HPC",
+       x = "ntasks",
+       y = "Speedup",
+       color = "Computer Type") + 
+  #theme_fivethirtyeight() + 
+  theme(text = element_text(size = 14), axis.title = element_text(), legend.position = "right") + 
+  scale_color_manual(labels = c("Local", "HPC"), values = myColors) +
+  ggsave(".\\ass1data\\p5\\plotP3P5merge.png", width = 12, height = 4.5, type = "cairo")
 
 
 

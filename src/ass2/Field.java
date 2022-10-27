@@ -9,6 +9,7 @@ import java.util.Hashtable;
 
 public class Field {
 
+    Semaphore mutSem = new Semaphore(1);
     Hashtable<Pos, Semaphore> ht;
 
     public Field() {
@@ -17,6 +18,15 @@ public class Field {
 
     /* Block until car no. may safely enter tile at pos */
     public void enter(int no, Pos pos) throws InterruptedException {
+        mutSem.P();
+            if (!ht.containsKey(pos)) {
+                ht.put(pos, new Semaphore(1));
+            }
+        mutSem.V();
+
+        ht.get(pos).P();
+
+        /* Old code
         if (ht.containsKey(pos)) {
             ht.get(pos).P();
         }
@@ -24,6 +34,7 @@ public class Field {
             ht.put(pos, new Semaphore(1));
             ht.get(pos).P();
         }
+        */
     }
 
     /* Release tile at position pos */
