@@ -6,6 +6,8 @@ package ass2;
 //Hans Henrik Lovengreen     Sep 26, 2022
 
 import java.util.Hashtable;
+import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Field {
 
@@ -39,8 +41,10 @@ public class Field {
     }
 
     /* Release tile at position pos */
-    public void leave(Pos pos) {
-        ht.get(pos).V();
+    public void leave(Pos pos) throws InterruptedException {
+        muxSem.P();
+            ht.get(pos).V();
+        muxSem.V();
     }
 
 }
