@@ -25,7 +25,7 @@ class NaiveBarrierNoSync extends Barrier {
         arrived++;
 
         // prob 2.2 all 9 cars rendered waiting
-        // Thread.sleep(10000);
+        Thread.sleep(10000);
 
         synchronized(this) {
             if (arrived < 9) {
@@ -35,13 +35,11 @@ class NaiveBarrierNoSync extends Barrier {
                 notifyAll();
             }
         }
-
     }
 
     @Override
     public void on() {
         active = true;
-
     }
 
     @Override
@@ -51,7 +49,6 @@ class NaiveBarrierNoSync extends Barrier {
         synchronized(this) {
             notifyAll();
         }
-
     }
 
 
@@ -59,9 +56,7 @@ class NaiveBarrierNoSync extends Barrier {
     // May be (ab)used for robustness testing
     public synchronized void set(int k) {
         notify();
-
     }
-
 
 }
 

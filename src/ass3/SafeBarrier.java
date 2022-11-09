@@ -13,7 +13,6 @@ class SafeBarrier extends Barrier {
 
     public SafeBarrier(CarDisplayI cd) {
         super(cd);
-
     }
 
     @Override
@@ -47,7 +46,6 @@ class SafeBarrier extends Barrier {
     @Override
     public synchronized void on() {
         active = true;
-
     }
 
     @Override
@@ -56,16 +54,13 @@ class SafeBarrier extends Barrier {
         arrived = 0;
         OK = false;
         notifyAll();
-
     }
 
     @Override
     // May be (ab)used for robustness testing
     public synchronized void set(int k) {
         notify();
-
     }
 
-    
 }
 

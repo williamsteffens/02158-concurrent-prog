@@ -27,13 +27,11 @@ class NaiveBarrier extends Barrier {
             arrived = 0;
             notifyAll();
         }
-
     }
 
     @Override
     public synchronized void on() {
         active = true;
-
     }
 
     @Override
@@ -41,14 +39,12 @@ class NaiveBarrier extends Barrier {
         active = false;
         arrived = 0;
         notifyAll();
-
     }
 
     @Override
     // May be (ab)used for robustness testing
     public synchronized void set(int k) {
         notify();
-
     }
 
 }
