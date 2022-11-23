@@ -13,6 +13,8 @@ class Conductor extends Thread {
     double basespeed = 7.0;          // Tiles per second
     double variation =  40;          // Percentage of base speed
 
+    boolean inAlley = false;
+
     CarDisplayI cd;                  // GUI part
     
     Field field;                     // Field control
@@ -87,10 +89,6 @@ class Conductor extends Thread {
         return (pos.row ==  0 && pos.col ==  0) || (pos.row ==  9 && pos.col ==  1);
     }
 
-    boolean inAlley(Pos pos) {
-        return (pos.col == 0 && 0 < pos.row && pos.row < 10);
-    }
-
     boolean atBarrier(Pos pos) {
         return pos.equals(barpos);
     }
@@ -102,6 +100,7 @@ class Conductor extends Thread {
             try {
                 field.enter(no, curpos);
             } catch (InterruptedException e) {
+                remBarrier.removeCar(no);
                 return;
             }
             cd.register(car);
@@ -113,6 +112,7 @@ class Conductor extends Thread {
                         mygate.pass();
                     } catch (InterruptedException e) {
                         field.leave(curpos);
+                        remBarrier.removeCar(no);
                         cd.deregister(car);
                         return;
                     }
@@ -125,15 +125,19 @@ class Conductor extends Thread {
                     if (atBarrier(curpos)) remBarrier.sync(no);
                 } catch (InterruptedException e) {
                     field.leave(curpos);
-                    remBarrier.removeCar();
+                    remBarrier.removeCar(no);
                     cd.deregister(car);
                     return;
                 }
 
                 try {
-                    if (atEntry(curpos)) alley.enter(no);
+                    if (atEntry(curpos)) {
+                        alley.enter(no);
+                        inAlley = true;
+                    }
                 } catch (InterruptedException e) {
                     field.leave(curpos);
+                    remBarrier.removeCar(no);
                     cd.deregister(car);
                     return;
                 }
@@ -141,9 +145,10 @@ class Conductor extends Thread {
                 try {
                     field.enter(no, newpos);
                 } catch (InterruptedException e) {
-                    if (inAlley(curpos))
+                    if (inAlley)
                         alley.leave(no);
                     field.leave(curpos);
+                    remBarrier.removeCar(no);
                     cd.deregister(car);
                     return;
                 }
@@ -151,16 +156,20 @@ class Conductor extends Thread {
                 try {
                     car.driveTo(newpos);
                 } catch (InterruptedException e) {
-                    if (inAlley(curpos))
+                    if (inAlley)
                         alley.leave(no);
                     field.leave(newpos);
                     field.leave(curpos);
+                    remBarrier.removeCar(no);
                     cd.deregister(car);
                     return;
                 }
 
                 field.leave(curpos);
-                if (atExit(newpos)) alley.leave(no);
+                if (atExit(newpos)) {
+                    alley.leave(no);
+                    inAlley = false;
+                }
 
                 curpos = newpos;
             }
@@ -229,6 +238,7 @@ public class CarControl implements CarControlI{
             conductor[no] = new Conductor(no,cd,gate[no],field,alley,remBarrier);
             conductor[no].setName("Conductor-" + no);
             conductor[no].start();
+            remBarrier.restoreCar(no);
         }
     }
 

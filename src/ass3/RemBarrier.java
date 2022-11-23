@@ -5,14 +5,19 @@ package ass3;
 
 //Hans Henrik Lovengreen     Oct 25, 2022
 
+import java.util.Arrays;
+
 class RemBarrier extends Barrier {
 
     int arrived = 0;
     boolean active = false;
     boolean carsPassing = false;
+    int th = 9;
+    boolean[] waiting = new boolean[th];
     
     public RemBarrier(CarDisplayI cd) {
         super(cd);
+        Arrays.fill(waiting, false);
     }
 
     @Override
@@ -24,14 +29,17 @@ class RemBarrier extends Barrier {
             wait();
 
         arrived++;
-        if (arrived < 9) {
-            while (!carsPassing)
+        if (arrived < th) {
+            while (!carsPassing) {
+                waiting[no] = true;
                 wait();
+            }
         }
         else {
             carsPassing = true;
             notifyAll();
         }
+        waiting[no] = false;
         arrived--;
 
         if (arrived == 0) {
@@ -48,16 +56,27 @@ class RemBarrier extends Barrier {
     @Override
     public synchronized void off() {
         active = false;
-        if (arrived > 0)
+        if (arrived > 0) {
             carsPassing = true;
-        notifyAll();
+            notifyAll();
+        }
     }
 
     /* Add further methods as needed */
-    public synchronized void removeCar() {
-
-
+    public synchronized void removeCar(int no) {
+        if (waiting[no]) {
+            arrived--;
+            waiting[no] = false;
+        }
+        th--;
+        if (arrived == th) {
+            carsPassing = true;
+            notifyAll();
+        }
     }
-   
-    
+
+    public synchronized void restoreCar(int no) {
+        th++;
+    }
+
 }
