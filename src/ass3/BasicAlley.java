@@ -12,7 +12,7 @@ public class BasicAlley extends Alley {
     /* Block until car no. may enter alley */
     public synchronized void enter(int no) throws InterruptedException {
         if (no < 5) {
-            while (up   > 0) { wait(); }
+            while (up > 0) { wait(); }
             down++;
         } else {
             while (down > 0) { wait(); }
@@ -27,7 +27,7 @@ public class BasicAlley extends Alley {
             if (down == 0) notifyAll();
         } else {
             up--; 
-            if (up   == 0) notifyAll();
+            if (up == 0) notifyAll();
         }
     }
 

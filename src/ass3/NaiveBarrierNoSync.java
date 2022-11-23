@@ -19,15 +19,16 @@ class NaiveBarrierNoSync extends Barrier {
         if (!active)
             return;
 
-        // prob 2.2 less than 9 cars rendered waiting
-        //Thread.sleep(10000);
-
         arrived++;
+        System.out.println(no + " " + arrived);
 
         // prob 2.2 all 9 cars rendered waiting
-        Thread.sleep(10000);
+        //Thread.sleep(3000);
 
         synchronized(this) {
+            // prob 2.3
+            Thread.sleep(500);
+            System.out.println("inside: " + no + " " + arrived);
             if (arrived < 9) {
                 wait();
             } else {

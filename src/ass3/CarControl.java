@@ -17,7 +17,7 @@ class Conductor extends Thread {
     
     Field field;                     // Field control
     Alley alley;                     // Alley control    
-    Barrier barrier;                 // Barrier control    
+    RemBarrier remBarrier;                 // Barrier control
 
     int no;                          // Car number
     Pos startpos;                    // Start position (provided by GUI)
@@ -28,13 +28,13 @@ class Conductor extends Thread {
     Pos curpos;                      // Current position 
     Pos newpos;                      // New position to go to
 
-    public Conductor(int no, CarDisplayI cd, Gate g, Field field, Alley alley, Barrier barrier) {
+    public Conductor(int no, CarDisplayI cd, Gate g, Field field, Alley alley, RemBarrier remBarrier) {
 
         this.no = no;
         this.cd = cd;
         this.field = field;
         this.alley = alley;
-        this.barrier = barrier;
+        this.remBarrier = remBarrier;
         mygate = g;
         startpos = cd.getStartPos(no);
         barpos   = cd.getBarrierPos(no);  // For later use
@@ -86,7 +86,11 @@ class Conductor extends Thread {
     boolean atExit(Pos pos) {
         return (pos.row ==  0 && pos.col ==  0) || (pos.row ==  9 && pos.col ==  1);
     }
-    
+
+    boolean inAlley(Pos pos) {
+        return (pos.col == 0 && 0 < pos.row && pos.row < 10);
+    }
+
     boolean atBarrier(Pos pos) {
         return pos.equals(barpos);
     }
@@ -95,24 +99,65 @@ class Conductor extends Thread {
         try {
             CarI car = cd.newCar(no, col, startpos);
             curpos = startpos;
-            field.enter(no, curpos);
+            try {
+                field.enter(no, curpos);
+            } catch (InterruptedException e) {
+                return;
+            }
             cd.register(car);
 
-            while (true) { 
+            while (true) {
 
-                if (atGate(curpos)) { 
-                    mygate.pass(); 
+                if (atGate(curpos)) {
+                    try {
+                        mygate.pass();
+                    } catch (InterruptedException e) {
+                        field.leave(curpos);
+                        cd.deregister(car);
+                        return;
+                    }
                     car.setSpeed(chooseSpeed());
                 }
 
                 newpos = nextPos(curpos);
 
-                if (atBarrier(curpos)) barrier.sync(no);
-                
-                if (atEntry(curpos)) alley.enter(no);
-                field.enter(no, newpos);
+                try {
+                    if (atBarrier(curpos)) remBarrier.sync(no);
+                } catch (InterruptedException e) {
+                    field.leave(curpos);
+                    remBarrier.removeCar();
+                    cd.deregister(car);
+                    return;
+                }
 
-                car.driveTo(newpos);
+                try {
+                    if (atEntry(curpos)) alley.enter(no);
+                } catch (InterruptedException e) {
+                    field.leave(curpos);
+                    cd.deregister(car);
+                    return;
+                }
+
+                try {
+                    field.enter(no, newpos);
+                } catch (InterruptedException e) {
+                    if (inAlley(curpos))
+                        alley.leave(no);
+                    field.leave(curpos);
+                    cd.deregister(car);
+                    return;
+                }
+
+                try {
+                    car.driveTo(newpos);
+                } catch (InterruptedException e) {
+                    if (inAlley(curpos))
+                        alley.leave(no);
+                    field.leave(newpos);
+                    field.leave(curpos);
+                    cd.deregister(car);
+                    return;
+                }
 
                 field.leave(curpos);
                 if (atExit(newpos)) alley.leave(no);
@@ -136,7 +181,7 @@ public class CarControl implements CarControlI{
     Gate[] gate;              // Gates
     Field field;              // Field
     Alley alley;              // Alley
-    Barrier barrier;          // Barrier
+    RemBarrier remBarrier;       // Barrier
 
     public CarControl(CarDisplayI cd) {
         this.cd = cd;
@@ -144,11 +189,11 @@ public class CarControl implements CarControlI{
         gate = new Gate[9];
         field = new Field();
         alley = Alley.create();
-        barrier = Barrier.create(cd);
+        remBarrier = new RemBarrier(cd);
 
         for (int no = 0; no < 9; no++) {
             gate[no] = Gate.create();
-            conductor[no] = new Conductor(no,cd,gate[no],field,alley,barrier);
+            conductor[no] = new Conductor(no,cd,gate[no],field,alley,remBarrier);
             conductor[no].setName("Conductor-" + no);
             conductor[no].start();
         } 
@@ -162,24 +207,29 @@ public class CarControl implements CarControlI{
         gate[no].close();
     }
 
-    public void barrierOn() { 
-        barrier.on();
+    public void barrierOn() {
+        remBarrier.on();
     }
 
     public void barrierOff() {
-        barrier.off();
+        remBarrier.off();
     }
 
    public void barrierSet(int k) {
-        barrier.set(k);
+       remBarrier.set(k);
    }
     
-    public void removeCar(int no) { 
-        cd.println("Remove Car not implemented in this version");
+    public void removeCar(int no) {
+        if (conductor[no].isAlive())
+            conductor[no].interrupt();
     }
 
-    public void restoreCar(int no) { 
-        cd.println("Restore Car not implemented in this version");
+    public void restoreCar(int no) {
+        if (!conductor[no].isAlive()) {
+            conductor[no] = new Conductor(no,cd,gate[no],field,alley,remBarrier);
+            conductor[no].setName("Conductor-" + no);
+            conductor[no].start();
+        }
     }
 
     /* Speed settings for testing purposes */
@@ -193,7 +243,6 @@ public class CarControl implements CarControlI{
     }
 
 }
-
 
 
 

@@ -9,7 +9,7 @@ class SafeBarrier extends Barrier {
 
     int arrived = 0;
     boolean active = false;
-    boolean OK = false;
+    boolean carsPassing = false;
 
     public SafeBarrier(CarDisplayI cd) {
         super(cd);
@@ -20,25 +20,22 @@ class SafeBarrier extends Barrier {
         if (!active)
             return;
 
-        while(OK) {
+        while (carsPassing)
             wait();
-            if (!active)
-                return;
-        }
+
         arrived++;
-        if (arrived == 9) {
-            OK = true;
+        if (arrived < 9) {
+            while (!carsPassing)
+                wait();
+        }
+        else {
+            carsPassing = true;
             notifyAll();
         }
-
-        while(!OK) {
-            wait();
-            if (!active)
-                return;
-        }
         arrived--;
+
         if (arrived == 0) {
-            OK = false;
+            carsPassing = false;
             notifyAll();
         }
     }
@@ -51,8 +48,8 @@ class SafeBarrier extends Barrier {
     @Override
     public synchronized void off() {
         active = false;
-        arrived = 0;
-        OK = false;
+        if (arrived > 0)
+            carsPassing = true;
         notifyAll();
     }
 

@@ -14,7 +14,7 @@ public abstract class Barrier {
     }
        
     public static Barrier create(CarDisplayI cd) {
-        return new NaiveBarrier(cd);
+        return new RemBarrier(cd);
     }
 
     public void sync(int no) throws InterruptedException { 
@@ -25,7 +25,7 @@ public abstract class Barrier {
         cd.println("Barrier On not implemented in this version");
     };
     
-    public void off() { 
+    public void off() {
         cd.println("Barrier Off not implemented in this version");
     };
     
